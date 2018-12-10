@@ -30,4 +30,7 @@ public final class Story: UniqueId {
     public  static func removeById( _ id_: Int ) {
         globalDictionaryById[ id_ ] = nil
     }
+    public  static func storyIds() -> [Int] {
+        return [Int](globalDictionaryById.keys)
+    }
 }
