@@ -34,10 +34,15 @@ class TableViewController: UIViewController, LayoutLoading, UITableViewDataSourc
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let node    = tableView.dequeueReusableCellNode(withIdentifier: "templateCell", for: indexPath )
         let storyId = storyIds[ indexPath.row ]
-        let story   = Story.getById( storyId )
-        let title   = story != nil ? story!.label : "ERROR: missing story id: \(storyId)"
+        let story   = Story.getById( storyId )!
+        let summary = ContentSummary(storyId: storyId )
+        let title   = story.label
+        let image   = story.storyImage()
+        let detail  = "\(summary.countImage) 🌃 \(summary.countMovie) 📽 \(summary.countText) 📖"
         node.setState([
-            "rowTitle": title
+            "rowTitle":  title,
+            "rowDetail": detail,
+            "image":     image
         ])
         return node.view as! UITableViewCell
     }

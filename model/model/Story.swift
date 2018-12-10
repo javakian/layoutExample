@@ -18,7 +18,19 @@ public final class Story: UniqueId {
         self.aChapterId     = aChapterId
         super.init(uId: id )
     }
-    
+    public  func    storyImage() -> UIImage {
+        for chapterId in aChapterId {
+            if let chapter = Chapter.getById( chapterId ) {
+                for assetId in chapter.aUniqueId {
+                    if let assetImage = Image.getById( assetId ) {
+                        return assetImage.loadUIImage()
+                    }
+                }
+            }
+        }
+        let imageAsset = Image.getById( eUId.phMOR_Bear.rawValue )!
+        return imageAsset.loadUIImage()
+    }
     // MARK: static
     private static var  globalDictionaryById    =    [Int: Story]()
     public  static func getById( _ id_: Int ) -> Story? {

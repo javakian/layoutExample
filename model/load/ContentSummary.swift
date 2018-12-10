@@ -12,15 +12,34 @@ public final class ContentSummary {
     public private(set) var countMovie: Int     = 0
     public private(set) var countText:  Int     = 0
     
+    public init( assetId: Int ) {
+        self.nodeId = assetId
+        self.evaluateAssetId( assetId )
+    }
     public init( chapterId: Int ) {
-        self.nodeId         =   chapterId
+        self.nodeId    =   chapterId
         if let chapter = Chapter.getById( chapterId ) {
             for contentId in chapter.aUniqueId {
                 self.evaluateAssetId( contentId )
               }
         }
     }
-    
+    public init( storyId: Int ) {
+        self.nodeId = storyId
+        if let story = Story.getById( storyId ) {
+            let summaryTotal = ContentSummary(assetId: story.summaryId )
+            self.addSummary( summaryTotal )
+            for chapterId in story.aChapterId {
+                let chapterTotal = ContentSummary(chapterId: chapterId )
+                self.addSummary( chapterTotal )
+            }
+        }
+    }
+    private func addSummary( _ summary: ContentSummary ) {
+        self.countImage += summary.countImage
+        self.countMovie += summary.countMovie
+        self.countText  += summary.countText
+    }
     private func evaluateAssetId( _ assetId: Int ) {
         if Image.getById( assetId ) != nil {
             self.countImage += 1

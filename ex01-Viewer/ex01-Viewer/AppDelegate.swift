@@ -13,7 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         LayoutNode.useLegacyLayoutMode = false
-        model.FixedAssets.loadAll()
+        model.AssetsStory01.loadAll()
+        model.AssetsStory02.loadAll()
 
         window = UIWindow()
         window?.rootViewController = TableViewController()

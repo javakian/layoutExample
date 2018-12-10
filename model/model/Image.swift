@@ -17,6 +17,14 @@ public final class Image: UniqueId {
         super.init(uId: id )
     }
     
+    public func loadUIImage() -> UIImage {
+        if ( self.image == nil ) {
+            let bundle = Bundle(for: type(of: self ) )
+            self.image = UIImage(named: self.resourceName, in: bundle, compatibleWith: nil )!
+        }
+        return self.image!
+    }
+    
     // MARK: static
     private static var  globalDictionaryById    =    [Int: Image]()
     public  static func getById( _ id_: Int ) -> Image? {

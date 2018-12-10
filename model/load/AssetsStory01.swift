@@ -1,11 +1,11 @@
-//  FixedAssets.swift
+//  AssetsStory01.swift
 //  model
 //
 //  Created by CHH51 on 12/6/18.
 import Foundation
 
-/// Collection of static functions to load the initial set of assets
-public class FixedAssets {
+/// Collection of static functions to load the initial set of assets for story 1
+public class AssetsStory01 {
     public static func loadAll() {
         self.loadImage()
         self.loadMovie()
@@ -104,7 +104,7 @@ public class FixedAssets {
     private static func loadStory() {
         Story.addStory( Story(id: eUId.stYurtFirstTrip.rawValue,
                               label: "First Trip in Yurt",
-                              summaryId: eUId.txStorySummary.rawValue,
+                              summaryId: eUId.txStorySummary01.rawValue,
                               aChapterId: [ eUId.chMOR.rawValue,
                                             eUId.chOFP.rawValue,
                                             eUId.chBHBasin.rawValue,
@@ -121,9 +121,9 @@ public class FixedAssets {
         let p2a = Para(head: Heading(.h2, "First Trip in Yurt"),
                        aBody: [ Body(.list, "Museum of the Rockies, Bozeman, MT"),
                                 Body(.list, "Ousel Falls, Big Sky, MT"),
-                                Body(.list, "eehive Meadows, Big Sky, MT"),
+                                Body(.list, "Beehive Basin, Big Sky, MT"),
                                 Body(.list, "Earthquake Lake, Ennis, MT")])
-        Text.addText( Text(id: eUId.txStorySummary.rawValue,
+        Text.addText( Text(id: eUId.txStorySummary01.rawValue,
                            aPara: [ p2a ]))
     }
     /// This is a static class

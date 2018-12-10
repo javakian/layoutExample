@@ -48,12 +48,14 @@ public enum eUId: Int {
     case phEarthquakeLake_1  ,phEarthquakeLake_2  ,phEarthquakeLake_3  ,phEarthquakeLake_4
     case phMOR_Bear          ,phMOR_Blacksmith    ,phMOR_DinoBattle    ,phMOR_PioneerHouse
     case phMOR_PioneerKitchen,phMOR_TRex          ,phOFP_GallatinBridge,phOFP_RiverCliff
+    case phLCCPW_EntryMarch  ,phLCCPW_WomenDancers,phLCCPW_MaleDancer
     
     case mvOFP_Falls
     
-    case txMOR_Entry         ,txStorySummary
+    case txMOR_Entry         ,txStorySummary01     ,txStorySummary02
     
     case chMOR               ,chOFP                ,chBHBasin           ,chEarthquakeLake
+    case chLCCPW_Entry 
     
-    case stYurtFirstTrip
+    case stYurtFirstTrip     ,stLCCommunityPowWow
 }

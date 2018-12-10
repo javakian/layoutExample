@@ -1,26 +1,34 @@
 <UITableView
-    backgroundColor="tintColor"
-    contentInset.bottom="safeAreaInsets.bottom"
-    contentInset.top="safeAreaInsets.top"
-    contentInsetAdjustmentBehavior="never"
-    contentOffset.y="-safeAreaInsets.top"
-    estimatedSectionHeaderHeight="20"
-    scrollIndicatorInsets.bottom="safeAreaInsets.bottom"
-    scrollIndicatorInsets.top="safeAreaInsets.top"
-    style="plain">
+    backgroundColor                ="tintColor"
+    contentInset.bottom            ="safeAreaInsets.bottom"
+    contentInset.top               ="safeAreaInsets.top"
+    contentInsetAdjustmentBehavior ="never"
+    contentOffset.y                ="-safeAreaInsets.top"
+    estimatedSectionHeaderHeight   ="20"
+    scrollIndicatorInsets.bottom   ="safeAreaInsets.bottom"
+    scrollIndicatorInsets.top      ="safeAreaInsets.top"
+    style                          ="plain">
     
     
     <!-- Table cell template -->
     <UITableViewCell
-        detailTextLabel.highlightedTextColor="#fff7"
-        detailTextLabel.text="This cell is defined as a template in TableView.xml"
-        detailTextLabel.textColor="#aaa"
-        height="auto + 20"
-        reuseIdentifier="templateCell"
-        selectedBackgroundView.backgroundColor="tintColor"
-        style="subtitle"
-        textLabel.highlightedTextColor="white"
-        textLabel.text="{rowTitle}">
-        
+        detailTextLabel.highlightedTextColor    ="#fff7"
+        detailTextLabel.text                    ="{rowDetail}"
+        detailTextLabel.textColor               ="#666"
+        detailTextLabel.font                    ="Futura 18"
+        height                                  ="50"
+        reuseIdentifier                         ="templateCell"
+        selectedBackgroundView.backgroundColor  ="tintColor"
+        style                                   ="subtitle"
+        textLabel.highlightedTextColor          ="white"
+        textLabel.text                          ="{rowTitle}">
+        <UIImageView
+            image          ="{image}"
+            right          ="5"
+            top            ="5"
+            height         ="40"
+            width          ="60"
+            contentMode    ="scaleAspectFit"
+        />
      </UITableViewCell>
 </UITableView>
