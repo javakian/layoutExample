@@ -17,6 +17,7 @@
 [l17]: https://github.com/schibsted/layout#composition 
 [l18]: https://github.com/schibsted/layout#templates 
 [l19]: https://github.com/schibsted/layout#macros 
+[l20]: https://developer.apple.com/videos/play/wwdc2017/245 
 
 # layoutExample
 Real world example using schibsted/layout
@@ -28,22 +29,22 @@ Real world example using schibsted/layout
 |[Actions - XML defined][l03]               |      |     |     |     |     |
 |[Outlets][l04]                             |      |     |     |     |     |
 |[Delegates - code wired][l05]              |  X   |     |     |     |     |
-|[Delegates - implied][l05]                 |      |     |     |     |     |
+|[Delegates - implied][l05]                 |      |  X  |     |     |     |
 |[Animation][l06]                           |      |     |     |     |     |
 |[Attributed Strings][l07]                  |      |     |     |     |     |
 |[Fonts][l08]                               |      |     |     |     |     |
 |[Functions][l09]                           |      |     |     |     |     |
 |[XML Composition][l17]                     |      |     |     |     |     |
-|[XML Templates][l18]                       |      |     |     |     |     |
+|[XML Templates][l18]                       |      |  X  |     |     |     |
+|[Dynamic Type][l20]                        |      |  X  |     |     |     |
 |                                           |      |     |     |     |     |
 
 | UIKit Feature ⇩ . . . . Used in Example ➱ |  1   |  2  |  3  |  4  |  5  | 
 |:------------------------------------------|:----:|:---:|:---:|:---:|:---:|
 |[UIControl][l10]                           |      |     |     |     |     |
-|[UIButton][l11]                            |      |     |     |     |     |
+|[UIButton][l11]                            |      |  X  |     |     |     |
 |[UISegmentedControl][l12]                  |      |     |     |     |     |
 |[UIStackView][l13]                         |      |     |     |     |     |
-|[UITableView][l14]                         |  X   |     |     |     |     |
-|[UICollectionView][l15]                    |      |     |     |     |     |
-|[UINavigationController][l16]              |      |     |     |     |     |
+|[UITableView][l14]                         |  X   |  X  |     |     |     |
+|[UICollectionView][l15]                    |      |  X  |     |     |     |
 |                                           |      |     |     |     |     |
