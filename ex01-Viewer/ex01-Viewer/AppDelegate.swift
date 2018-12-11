@@ -4,8 +4,8 @@
 //  Created by CHH51 on 12/6/18.
 
 import UIKit
-import layout
-import model
+import Layout
+import Model
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,8 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         LayoutNode.useLegacyLayoutMode = false
-        model.AssetsStory01.loadAll()
-        model.AssetsStory02.loadAll()
+        Model.AssetsStory01.loadAll()
+        Model.AssetsStory02.loadAll()
 
         window = UIWindow()
         window?.rootViewController = TableViewController()

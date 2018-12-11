@@ -5,9 +5,9 @@
       location = "group:ex01-Viewer/ex01-Viewer.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:model/model.xcodeproj">
+      location = "group:/Users/chris/PlayArea/layoutExample/model/Model.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:layout/layout.xcodeproj">
+      location = "group:/Users/chris/PlayArea/layoutExample/layout/Layout.xcodeproj">
    </FileRef>
 </Workspace>

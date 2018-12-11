@@ -50,7 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		83E430C821B882E6003E2A12 /* layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83E430C821B882E6003E2A12 /* Layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E430CB21B882E6003E2A12 /* layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = layout.h; sourceTree = "<group>"; };
 		83E430CC21B882E6003E2A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83E430D321B88368003E2A12 /* CALayer+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Layout.swift"; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 		83E430C921B882E6003E2A12 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83E430C821B882E6003E2A12 /* layout.framework */,
+				83E430C821B882E6003E2A12 /* Layout.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,9 +199,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		83E430C721B882E6003E2A12 /* layout */ = {
+		83E430C721B882E6003E2A12 /* Layout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83E430D021B882E6003E2A12 /* Build configuration list for PBXNativeTarget "layout" */;
+			buildConfigurationList = 83E430D021B882E6003E2A12 /* Build configuration list for PBXNativeTarget "Layout" */;
 			buildPhases = (
 				83E430C321B882E6003E2A12 /* Headers */,
 				83E430C421B882E6003E2A12 /* Sources */,
@@ -212,9 +212,9 @@
 			);
 			dependencies = (
 			);
-			name = layout;
+			name = Layout;
 			productName = layout;
-			productReference = 83E430C821B882E6003E2A12 /* layout.framework */;
+			productReference = 83E430C821B882E6003E2A12 /* Layout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -232,7 +232,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83E430C221B882E6003E2A12 /* Build configuration list for PBXProject "layout" */;
+			buildConfigurationList = 83E430C221B882E6003E2A12 /* Build configuration list for PBXProject "Layout" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -244,7 +244,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				83E430C721B882E6003E2A12 /* layout */,
+				83E430C721B882E6003E2A12 /* Layout */,
 			);
 		};
 /* End PBXProject section */
@@ -449,7 +449,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chh51.layoutExample.layout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chh51.layoutExample.Layout;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -476,7 +476,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chh51.layoutExample.layout;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chh51.layoutExample.Layout;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -487,7 +487,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		83E430C221B882E6003E2A12 /* Build configuration list for PBXProject "layout" */ = {
+		83E430C221B882E6003E2A12 /* Build configuration list for PBXProject "Layout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83E430CE21B882E6003E2A12 /* Debug */,
@@ -496,7 +496,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83E430D021B882E6003E2A12 /* Build configuration list for PBXNativeTarget "layout" */ = {
+		83E430D021B882E6003E2A12 /* Build configuration list for PBXNativeTarget "Layout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83E430D121B882E6003E2A12 /* Debug */,

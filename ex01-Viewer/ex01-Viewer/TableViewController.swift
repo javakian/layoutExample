@@ -5,8 +5,8 @@
 //  Created by CHH51 on 12/6/18.
 
 import UIKit
-import layout
-import model
+import Layout
+import Model
 
 class TableViewController: UIViewController, LayoutLoading, UITableViewDataSource  {
     var tableView:  UITableView?
