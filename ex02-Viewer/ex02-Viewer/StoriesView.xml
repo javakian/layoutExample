@@ -6,7 +6,8 @@
         view.backgroundColor    ="white">
             <UITableView
                 top                  ="#navBar.bottom"
-                outlet               ="storyTableView"
+                outlet               ="storiesTableView"
+                rowHeight            ="{rowHeight}"
                 backgroundColor      ="#bbb"
                 bottom               ="parent.bottom">
                 
@@ -15,7 +16,6 @@
                     detailTextLabel.text                    ="{rowDetail}"
                     detailTextLabel.textColor               ="#666"
                     detailTextLabel.font                    ="Futura 18"
-                    height                                  ="50"
                     reuseIdentifier                         ="templateCell"
                     selectedBackgroundView.backgroundColor  ="tintColor"
                     style                                   ="subtitle"

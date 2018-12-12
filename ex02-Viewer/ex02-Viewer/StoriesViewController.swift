@@ -1,4 +1,4 @@
-//  StoryViewController.swift
+//  StoriesViewController.swift
 //  ex02-Viewer
 //
 //  Created by CHH51 on 12/6/18.
@@ -7,16 +7,18 @@ import UIKit
 import Layout
 import Model
 
-class StoryViewController: UIViewController, LayoutLoading, UITableViewDataSource {
-    @IBOutlet   var storyTableView: UITableView? 
-                var storyIds        = [Int]()
+class StoriesViewController: UIViewController, LayoutLoading, UITableViewDataSource {
+    @IBOutlet   var storiesTableView: UITableView?
+                var storyIds          = [Int]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         storyIds = Story.storyIds()
         
-        loadLayout(named:    "StoryView.xml",
-                   constants: [String:Any]() )
+        loadLayout(named:    "StoriesView.xml",
+                   constants: [
+                        "rowHeight": 50
+                              ] )
     }
 
 

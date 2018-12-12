@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		8320CD0721C045BB009735BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320CD0621C045BB009735BC /* AppDelegate.swift */; };
-		8320CD0921C045BB009735BC /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320CD0821C045BB009735BC /* StoryViewController.swift */; };
+		8320CD0921C045BB009735BC /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320CD0821C045BB009735BC /* StoriesViewController.swift */; };
 		8320CD0E21C045BC009735BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8320CD0D21C045BC009735BC /* Assets.xcassets */; };
 		8320CD1121C045BC009735BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8320CD0F21C045BC009735BC /* LaunchScreen.storyboard */; };
 		8320CD1921C045DD009735BC /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8320CD1821C045DD009735BC /* Model.framework */; };
 		8320CD1A21C045DD009735BC /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8320CD1821C045DD009735BC /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8320CD1D21C045E6009735BC /* Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8320CD1C21C045E6009735BC /* Layout.framework */; };
 		8320CD1E21C045E6009735BC /* Layout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8320CD1C21C045E6009735BC /* Layout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8320CD2021C04DF1009735BC /* StoryView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8320CD1F21C04DF1009735BC /* StoryView.xml */; };
+		8320CD2021C04DF1009735BC /* StoriesView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8320CD1F21C04DF1009735BC /* StoriesView.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,13 +36,13 @@
 /* Begin PBXFileReference section */
 		8320CD0321C045BB009735BC /* ex02-Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ex02-Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8320CD0621C045BB009735BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8320CD0821C045BB009735BC /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		8320CD0821C045BB009735BC /* StoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
 		8320CD0D21C045BC009735BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8320CD1021C045BC009735BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8320CD1221C045BC009735BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8320CD1821C045DD009735BC /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8320CD1C21C045E6009735BC /* Layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8320CD1F21C04DF1009735BC /* StoryView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StoryView.xml; sourceTree = "<group>"; };
+		8320CD1F21C04DF1009735BC /* StoriesView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StoriesView.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				8320CD0621C045BB009735BC /* AppDelegate.swift */,
-				8320CD0821C045BB009735BC /* StoryViewController.swift */,
-				8320CD1F21C04DF1009735BC /* StoryView.xml */,
+				8320CD0821C045BB009735BC /* StoriesViewController.swift */,
+				8320CD1F21C04DF1009735BC /* StoriesView.xml */,
 				8320CD0D21C045BC009735BC /* Assets.xcassets */,
 				8320CD0F21C045BC009735BC /* LaunchScreen.storyboard */,
 				8320CD1221C045BC009735BC /* Info.plist */,
@@ -148,7 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8320CD2021C04DF1009735BC /* StoryView.xml in Resources */,
+				8320CD2021C04DF1009735BC /* StoriesView.xml in Resources */,
 				8320CD1121C045BC009735BC /* LaunchScreen.storyboard in Resources */,
 				8320CD0E21C045BC009735BC /* Assets.xcassets in Resources */,
 			);
@@ -161,7 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8320CD0921C045BB009735BC /* StoryViewController.swift in Sources */,
+				8320CD0921C045BB009735BC /* StoriesViewController.swift in Sources */,
 				8320CD0721C045BB009735BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

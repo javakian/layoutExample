@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Model.AssetsStory02.loadAll()
         
         window                      = UIWindow()
-        window?.rootViewController  = StoryViewController()
+        window?.rootViewController  = StoriesViewController()
         window?.makeKeyAndVisible()
         return true
     }
