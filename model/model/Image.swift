@@ -7,7 +7,7 @@ import Foundation
 public final class Image: UniqueId {
     public  let resourceName:    String
     public  var caption:         String?
-    private var image:           UIImage?
+    private var _image:          UIImage?
     
     public  init( id:       Int?,
                   rName:    String,
@@ -18,11 +18,11 @@ public final class Image: UniqueId {
     }
     
     public func loadUIImage() -> UIImage {
-        if ( self.image == nil ) {
+        if ( self._image == nil ) {
             let bundle = Bundle(for: type(of: self ) )
-            self.image = UIImage(named: self.resourceName, in: bundle, compatibleWith: nil )!
+            self._image = UIImage(named: self.resourceName, in: bundle, compatibleWith: nil )!
         }
-        return self.image!
+        return self._image!
     }
     
     // MARK: static

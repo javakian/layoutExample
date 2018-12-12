@@ -14,13 +14,13 @@ public final class ContentSummary {
     
     public init( assetId: Int ) {
         self.nodeId = assetId
-        self.evaluateAssetId( assetId )
+        self._evaluateAssetId( assetId )
     }
     public init( chapterId: Int ) {
         self.nodeId    =   chapterId
         if let chapter = Chapter.getById( chapterId ) {
             for contentId in chapter.aUniqueId {
-                self.evaluateAssetId( contentId )
+                self._evaluateAssetId( contentId )
               }
         }
     }
@@ -28,19 +28,19 @@ public final class ContentSummary {
         self.nodeId = storyId
         if let story = Story.getById( storyId ) {
             let summaryTotal = ContentSummary(assetId: story.summaryId )
-            self.addSummary( summaryTotal )
+            self._addSummary( summaryTotal )
             for chapterId in story.aChapterId {
                 let chapterTotal = ContentSummary(chapterId: chapterId )
-                self.addSummary( chapterTotal )
+                self._addSummary( chapterTotal )
             }
         }
     }
-    private func addSummary( _ summary: ContentSummary ) {
+    private func _addSummary( _ summary: ContentSummary ) {
         self.countImage += summary.countImage
         self.countMovie += summary.countMovie
         self.countText  += summary.countText
     }
-    private func evaluateAssetId( _ assetId: Int ) {
+    private func _evaluateAssetId( _ assetId: Int ) {
         if Image.getById( assetId ) != nil {
             self.countImage += 1
             return

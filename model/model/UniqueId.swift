@@ -24,19 +24,19 @@ public class UniqueId: Hashable {
     }
     
     // MARK: static
-    private static var setUniqueId     = Set<Int>(minimumCapacity: 100 )
-    private static var maxUniqueId     = Int.min
+    private static var _setUniqueId    = Set<Int>(minimumCapacity: 100 )
+    private static var _maxUniqueId    = Int.min
     
     private static func isValidUniqueId( _ uId_: Int ) -> Bool {
-        let ( result, _ ) = setUniqueId.insert( uId_ )
+        let ( result, _ ) = _setUniqueId.insert( uId_ )
         if ( result == true ) {
-            maxUniqueId = max( maxUniqueId, uId_ )
+            _maxUniqueId = max( _maxUniqueId, uId_ )
         }
         return result
     }
     
     private static func newUniqueId() -> Int {
-        let nextId = maxUniqueId + 1
+        let nextId = _maxUniqueId + 1
         _ = isValidUniqueId( nextId )
         return nextId
     }

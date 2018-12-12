@@ -7,7 +7,7 @@ import Foundation
 public final class Movie: UniqueId {
     public  let resourceName:    String
     public  var caption:         String?
-    private var image:           UIImage?
+    private var _image:          UIImage?
     
     public  init( id:       Int?,
                   rName:    String,

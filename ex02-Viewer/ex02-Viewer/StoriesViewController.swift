@@ -23,7 +23,7 @@ class StoriesViewController: UIViewController, LayoutLoading, UITableViewDataSou
 
 
     // MARK: UITableViewDataSource
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ( section == 0 ) ? self.storyIds.count : 0
     }
     
