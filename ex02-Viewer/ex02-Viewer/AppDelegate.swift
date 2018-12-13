@@ -19,8 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Model.AssetsStory01.loadAll()
         Model.AssetsStory02.loadAll()
         
+        let storiesController = StoriesViewController()
+        let navController     = UINavigationController(rootViewController: storiesController)
+        
         window                      = UIWindow()
-        window?.rootViewController  = StoriesViewController()
+        window?.rootViewController  = navController 
         window?.makeKeyAndVisible()
         return true
     }

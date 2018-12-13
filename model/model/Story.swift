@@ -21,11 +21,7 @@ public final class Story: UniqueId {
     public  func    storyImage() -> UIImage {
         for chapterId in aChapterId {
             if let chapter = Chapter.getById( chapterId ) {
-                for assetId in chapter.aUniqueId {
-                    if let assetImage = Image.getById( assetId ) {
-                        return assetImage.loadUIImage()
-                    }
-                }
+                return chapter.chapterImage()
             }
         }
         let imageAsset = Image.getById( eUId.phMOR_Bear.rawValue )!

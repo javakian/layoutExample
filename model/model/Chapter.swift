@@ -15,7 +15,16 @@ public final class Chapter: UniqueId {
         self.aUniqueId      =   aId 
         super.init(uId: id )
     }
-    
+    public  func    chapterImage() -> UIImage {
+        for assetId in self.aUniqueId {
+            if let assetImage = Image.getById( assetId ) {
+                return assetImage.loadUIImage()
+            }
+        }
+        let imageAsset = Image.getById( eUId.phMOR_Bear.rawValue )!
+        return imageAsset.loadUIImage()
+    }
+
     // MARK: static
     private static var  globalDictionaryById    =    [Int: Chapter]()
     public  static func getById( _ id_: Int ) -> Chapter? {

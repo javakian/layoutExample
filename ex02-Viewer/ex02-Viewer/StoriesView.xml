@@ -1,35 +1,30 @@
-<UINavigationController>
-    <UINavigationBar id            = "navBar"
-                     barTintColor  = "#ddd"/>
-    <UIViewController
-        navigationItem.title    ="Stories"
-        view.backgroundColor    ="white">
-            <UITableView
-                top                  ="#navBar.bottom"
-                outlet               ="storiesTableView"
-                rowHeight            ="{rowHeight}"
-                backgroundColor      ="#bbb"
-                bottom               ="parent.bottom">
-                
-                <UITableViewCell
-                    detailTextLabel.highlightedTextColor    ="#fff7"
-                    detailTextLabel.text                    ="{rowDetail}"
-                    detailTextLabel.textColor               ="#666"
-                    detailTextLabel.font                    ="Futura 18"
-                    reuseIdentifier                         ="templateCell"
-                    selectedBackgroundView.backgroundColor  ="tintColor"
-                    style                                   ="subtitle"
-                    textLabel.highlightedTextColor          ="white"
-                    textLabel.text                          ="{rowTitle}">
-                    <UIImageView
-                        image          ="{image}"
-                        right          ="5"
-                        top            ="5"
-                        height         ="40"
-                        width          ="60"
-                        contentMode    ="scaleAspectFit"
-                    />
-                </UITableViewCell>
-            </UITableView>
-    </UIViewController>
-</UINavigationController>
+<UIViewController
+    view.backgroundColor    ="white">
+        <UITableView
+            top                  ="{navBarBottom}"
+            outlet               ="storiesTableView"
+            rowHeight            ="{rowHeight}"
+            backgroundColor      ="#bbb"
+            bottom               ="parent.bottom">
+            
+            <UITableViewCell
+                detailTextLabel.highlightedTextColor    ="#fff7"
+                detailTextLabel.text                    ="{rowDetail}"
+                detailTextLabel.textColor               ="#666"
+                detailTextLabel.font                    ="Futura 18"
+                reuseIdentifier                         ="storiesTemplateCell"
+                selectedBackgroundView.backgroundColor  ="tintColor"
+                style                                   ="subtitle"
+                textLabel.highlightedTextColor          ="white"
+                textLabel.text                          ="{rowTitle}">
+                <UIImageView
+                    image          ="{image}"
+                    right          ="5"
+                    top            ="5"
+                    height         ="40"
+                    width          ="60"
+                    contentMode    ="scaleAspectFit"
+                />
+            </UITableViewCell>
+        </UITableView>
+</UIViewController>
