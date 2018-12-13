@@ -17,6 +17,9 @@
 		8320CD1E21C045E6009735BC /* Layout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8320CD1C21C045E6009735BC /* Layout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8320CD2021C04DF1009735BC /* StoriesView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8320CD1F21C04DF1009735BC /* StoriesView.xml */; };
 		833D809121C2D2AA006FE33F /* TableViewTemplate.xml in Resources */ = {isa = PBXBuildFile; fileRef = 833D809021C2D2AA006FE33F /* TableViewTemplate.xml */; };
+		833D809321C2FBB5006FE33F /* TableCellStandard.xml in Resources */ = {isa = PBXBuildFile; fileRef = 833D809221C2FBB5006FE33F /* TableCellStandard.xml */; };
+		833D809521C30CAE006FE33F /* TableCellLarge.xml in Resources */ = {isa = PBXBuildFile; fileRef = 833D809421C30CAE006FE33F /* TableCellLarge.xml */; };
+		833D809721C310B3006FE33F /* TableViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833D809621C310B3006FE33F /* TableViewLayout.swift */; };
 		8349CFAA21C1CFA900FCE7D4 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8349CFA921C1CFA900FCE7D4 /* StoryViewController.swift */; };
 		8349CFAC21C1D38700FCE7D4 /* StoryView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8349CFAB21C1D38700FCE7D4 /* StoryView.xml */; };
 /* End PBXBuildFile section */
@@ -47,6 +50,9 @@
 		8320CD1C21C045E6009735BC /* Layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8320CD1F21C04DF1009735BC /* StoriesView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StoriesView.xml; sourceTree = "<group>"; };
 		833D809021C2D2AA006FE33F /* TableViewTemplate.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TableViewTemplate.xml; sourceTree = "<group>"; };
+		833D809221C2FBB5006FE33F /* TableCellStandard.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TableCellStandard.xml; sourceTree = "<group>"; };
+		833D809421C30CAE006FE33F /* TableCellLarge.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TableCellLarge.xml; sourceTree = "<group>"; };
+		833D809621C310B3006FE33F /* TableViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewLayout.swift; sourceTree = "<group>"; };
 		8349CFA921C1CFA900FCE7D4 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		8349CFAB21C1D38700FCE7D4 /* StoryView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StoryView.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,7 +96,10 @@
 				8320CD1F21C04DF1009735BC /* StoriesView.xml */,
 				8349CFA921C1CFA900FCE7D4 /* StoryViewController.swift */,
 				8349CFAB21C1D38700FCE7D4 /* StoryView.xml */,
+				833D809621C310B3006FE33F /* TableViewLayout.swift */,
 				833D809021C2D2AA006FE33F /* TableViewTemplate.xml */,
+				833D809221C2FBB5006FE33F /* TableCellStandard.xml */,
+				833D809421C30CAE006FE33F /* TableCellLarge.xml */,
 				8320CD0D21C045BC009735BC /* Assets.xcassets */,
 				8320CD0F21C045BC009735BC /* LaunchScreen.storyboard */,
 				8320CD1221C045BC009735BC /* Info.plist */,
@@ -158,6 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8349CFAC21C1D38700FCE7D4 /* StoryView.xml in Resources */,
+				833D809521C30CAE006FE33F /* TableCellLarge.xml in Resources */,
+				833D809321C2FBB5006FE33F /* TableCellStandard.xml in Resources */,
 				833D809121C2D2AA006FE33F /* TableViewTemplate.xml in Resources */,
 				8320CD2021C04DF1009735BC /* StoriesView.xml in Resources */,
 				8320CD1121C045BC009735BC /* LaunchScreen.storyboard in Resources */,
@@ -173,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8349CFAA21C1CFA900FCE7D4 /* StoryViewController.swift in Sources */,
+				833D809721C310B3006FE33F /* TableViewLayout.swift in Sources */,
 				8320CD0921C045BB009735BC /* StoriesViewController.swift in Sources */,
 				8320CD0721C045BB009735BC /* AppDelegate.swift in Sources */,
 			);

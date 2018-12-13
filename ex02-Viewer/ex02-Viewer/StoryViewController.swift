@@ -7,14 +7,18 @@ import UIKit
 import Layout
 import Model
 
-class StoryViewController: UIViewController, LayoutLoading, UITableViewDataSource {
-    @IBOutlet   var storyTableView: UITableView?
+class StoryViewController: UIViewController, LayoutLoading,
+                           UITableViewDataSource, UITableViewDelegate, TableViewLayout {
+    @IBOutlet   var storyTableView: UITableView? {
+                    didSet { if let view = self.storyTableView {
+                                self.registerTableCells(tableView: view ) }
+                    }
+                }
                 let story:   Story
     
     internal init( storyId: Int ) {
         self.story   = Story.getById( storyId )!
         super.init(nibName: nil, bundle: nil )
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -26,7 +30,6 @@ class StoryViewController: UIViewController, LayoutLoading, UITableViewDataSourc
         
         loadLayout(named:    "StoryView.xml",
                    constants: [
-                    "rowHeight":    50,
                     "navBarBottom": self.navigationController!.navigationBar.bounds.height
             ] )
         self.navigationItem.title = self.story.label
@@ -39,7 +42,9 @@ class StoryViewController: UIViewController, LayoutLoading, UITableViewDataSourc
     }
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let node    = tableView.dequeueReusableCellNode(withIdentifier: "storyTemplateCell", for: indexPath )
+        let isLarge   = traitCollection.preferredContentSizeCategory.isAccessibilityCategory
+        let cellName  = isLarge ? "tableCellLarge" : "tableCellStandard"
+        let node      = tableView.dequeueReusableCellNode(withIdentifier: cellName, for: indexPath )
         let chapterId = self.story.aChapterId[ indexPath.row ]
         let chapter   = Chapter.getById( chapterId )!
         let summary   = ContentSummary( chapterId: chapterId)
@@ -49,9 +54,16 @@ class StoryViewController: UIViewController, LayoutLoading, UITableViewDataSourc
         node.setState([
             "rowTitle":  title,
             "rowDetail": detail,
-            "image":     image
+            "image":     image,
+            "hideImage": isLarge
+
             ])
         return node.view as! UITableViewCell
+    }
+    // MARK: UITableViewDelegate
+    internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let factor = CGFloat( self.rowHeightFactor(view: tableView ) )
+        return tableView.estimatedRowHeight * factor
     }
 }
 

@@ -1,0 +1,10 @@
+<UITableViewCell
+    reuseIdentifier                         ="tableCellLarge"
+    selectedBackgroundView.backgroundColor  ="tintColor"
+    style                                   =""
+    textLabel.highlightedTextColor          ="white"
+    textLabel.font                          ="Futura body"
+    textLabel.numberOfLines                 ="0"
+    textLabel.text                          ="{rowTitle}">
+</UITableViewCell>
+

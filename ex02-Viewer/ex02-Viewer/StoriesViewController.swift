@@ -7,8 +7,13 @@ import UIKit
 import Layout
 import Model
 
-class StoriesViewController: UIViewController, LayoutLoading, UITableViewDataSource, UITableViewDelegate {
-    @IBOutlet   var storiesTableView: UITableView?
+class StoriesViewController: UIViewController, LayoutLoading,
+                             UITableViewDataSource, UITableViewDelegate, TableViewLayout {
+    @IBOutlet   var storiesTableView: UITableView? {
+                    didSet { if let view = self.storiesTableView {
+                                self.registerTableCells(tableView: view ) }
+                    }
+                }
                 var storyIds          = [Int]()
 
     override func viewDidLoad() {
@@ -17,7 +22,6 @@ class StoriesViewController: UIViewController, LayoutLoading, UITableViewDataSou
         
         loadLayout(named:    "StoriesView.xml",
                    constants: [
-                        "rowHeight":    50,
                         "navBarBottom": self.navigationController!.navigationBar.bounds.height
                               ] )
         self.navigationItem.title = "Stories"
@@ -28,19 +32,21 @@ class StoriesViewController: UIViewController, LayoutLoading, UITableViewDataSou
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ( section == 0 ) ? self.storyIds.count : 0
     }
-    
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let node    = tableView.dequeueReusableCellNode(withIdentifier: "storiesTemplateCell", for: indexPath )
-        let storyId = storyIds[ indexPath.row ]
-        let story   = Story.getById( storyId )!
-        let summary = ContentSummary(storyId: storyId )
-        let title   = story.label
-        let image   = story.storyImage()
-        let detail  = "\(summary.countImage) 🌃 \(summary.countMovie) 📽 \(summary.countText) 📖"
+        let isLarge  = traitCollection.preferredContentSizeCategory.isAccessibilityCategory
+        let cellName = isLarge ? "tableCellLarge" : "tableCellStandard"
+        let node     = tableView.dequeueReusableCellNode(withIdentifier: cellName, for: indexPath )
+        let storyId  = storyIds[ indexPath.row ]
+        let story    = Story.getById( storyId )!
+        let summary  = ContentSummary(storyId: storyId )
+        let title    = story.label
+        let image    = story.storyImage()
+        let detail   = "\(summary.countImage) 🌃 \(summary.countMovie) 📽 \(summary.countText) 📖"
         node.setState([
-            "rowTitle":     title,
-            "rowDetail":    detail,
-            "image":        image
+            "rowTitle":   title,
+            "rowDetail":  detail,
+            "image":      image,
+            "hideImage":  isLarge
              ])
         return node.view as! UITableViewCell
     }
@@ -51,5 +57,9 @@ class StoriesViewController: UIViewController, LayoutLoading, UITableViewDataSou
         let storyVC = StoryViewController(storyId: storyId )
         self.navigationController?.pushViewController( storyVC, animated: true )
     }
+    internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let factor = CGFloat( self.rowHeightFactor(view: tableView ) )
+        return tableView.estimatedRowHeight * factor
+     }
 }
 

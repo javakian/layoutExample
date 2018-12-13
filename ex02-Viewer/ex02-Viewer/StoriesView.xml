@@ -1,27 +1,7 @@
 <UIViewController
     view.backgroundColor    ="white">
         <UITableView
-            template             ="TableViewTemplate.xml"
-            outlet               ="storiesTableView">
-            
-            <UITableViewCell
-                detailTextLabel.highlightedTextColor    ="#fff7"
-                detailTextLabel.text                    ="{rowDetail}"
-                detailTextLabel.textColor               ="#666"
-                detailTextLabel.font                    ="Futura 18"
-                reuseIdentifier                         ="storiesTemplateCell"
-                selectedBackgroundView.backgroundColor  ="tintColor"
-                style                                   ="subtitle"
-                textLabel.highlightedTextColor          ="white"
-                textLabel.text                          ="{rowTitle}">
-                <UIImageView
-                    image          ="{image}"
-                    right          ="5"
-                    top            ="5"
-                    height         ="40"
-                    width          ="60"
-                    contentMode    ="scaleAspectFit"
-                />
-            </UITableViewCell>
+            template        ="TableViewTemplate.xml"
+            outlet          ="storiesTableView">
         </UITableView>
 </UIViewController>

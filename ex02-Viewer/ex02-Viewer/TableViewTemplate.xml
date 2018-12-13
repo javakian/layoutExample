@@ -1,6 +1,6 @@
 <UITableView
     top                  ="{navBarBottom}"
-    rowHeight            ="{rowHeight}"
+    estimatedRowHeight   ="55"
     backgroundColor      ="#bbb"
     bottom               ="parent.bottom"/>
 
