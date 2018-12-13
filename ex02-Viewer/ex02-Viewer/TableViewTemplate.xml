@@ -1,0 +1,6 @@
+<UITableView
+    top                  ="{navBarBottom}"
+    rowHeight            ="{rowHeight}"
+    backgroundColor      ="#bbb"
+    bottom               ="parent.bottom"/>
+

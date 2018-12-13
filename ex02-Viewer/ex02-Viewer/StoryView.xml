@@ -1,11 +1,8 @@
 <UIViewController
     view.backgroundColor     ="white">
     <UITableView
-        top                  ="{navBarBottom}"
-        outlet               ="storyTableView"
-        rowHeight            ="{rowHeight}"
-        backgroundColor      ="#bbb"
-        bottom               ="parent.bottom">
+        template             ="TableViewTemplate.xml"
+        outlet               ="storyTableView">
         
         <UITableViewCell
             detailTextLabel.highlightedTextColor    ="#fff7"
