@@ -1,0 +1,49 @@
+<UICollectionView
+    backgroundColor                                 ="white"
+    collectionViewLayout.itemSize.height            ="collectionViewLayout.itemSize.width"
+    collectionViewLayout.itemSize.width             ="(100% - 6 * 10) / 2"
+    collectionViewLayout.minimumInteritemSpacing    ="10"
+    collectionViewLayout.scrollDirection            ="vertical"
+    contentInset.bottom                             ="safeAreaInsets.bottom"
+    contentInset.left                               ="10"
+    contentInset.right                              ="10"
+    contentInset.top                                ="safeAreaInsets.top"
+    contentInsetAdjustmentBehavior                  ="never"
+    contentOffset.y                                 ="-safeAreaInsets.top"
+    outlet                                          ="chapterCollectionView"
+    scrollIndicatorInsets.bottom                    ="safeAreaInsets.bottom"
+    scrollIndicatorInsets.top                       ="safeAreaInsets.top">
+    
+    <UICollectionViewCell
+        clipsToBounds   ="true"
+        reuseIdentifier ="chapterImageCell">
+        <UIImageView
+            contentMode="scaleAspectFit"
+            height="100%"
+            image="{image}"
+            width="100%"
+        />
+    </UICollectionViewCell>
+    
+    <UICollectionViewCell
+        clipsToBounds   ="true"
+        reuseIdentifier ="chapterMovieCell">
+        <AVPlayerViewController
+            player                  ="{avPlayer}"
+            showsPlaybackControls   ="false"/>
+    </UICollectionViewCell>
+    
+    <UICollectionViewCell
+        clipsToBounds   ="true"
+        reuseIdentifier ="chapterTextCell">
+        <UILabel
+            text            ="{cellText}"
+            font            ="Futura body"
+            numberOfLines   ="0"
+            lineBreakMode   ="byWordWrapping"
+            width           ="100%"
+            height          ="100%"
+            />
+    </UICollectionViewCell>
+
+</UICollectionView>

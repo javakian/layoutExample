@@ -33,6 +33,13 @@ public final class Para {
         heading     =   head
         arrayBody   =   aBody
     }
+    public func getSummary() -> String {
+        if heading != nil {
+            return heading!.text
+        } else {
+            return arrayBody[0].text 
+        }
+    }
 }
 
 public final class Text: UniqueId {

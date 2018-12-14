@@ -7,8 +7,8 @@ import UIKit
 import Layout
 import Model
 
-class StoriesViewController: UIViewController, LayoutLoading,
-                             UITableViewDataSource, UITableViewDelegate, TableViewLayout {
+final class StoriesViewController: UIViewController, LayoutLoading,
+                                   UITableViewDataSource, UITableViewDelegate, TableViewLayout {
     @IBOutlet   var storiesTableView: UITableView? {
                     didSet { if let view = self.storiesTableView {
                                 self.registerTableCells(tableView: view ) }

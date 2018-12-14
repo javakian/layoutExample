@@ -90,7 +90,7 @@ public class AssetsStory01 {
                               rName: "MOR_TRex.jpg",
                               caption: "entrance with T-Rex skeletion"))
         Image.addImage( Image(id: eUId.phOFP_RiverCliff.rawValue,
-                              rName: "OFP_RiverCliff.jpg",
+                              rName: "OFP_RiverCliff.png",
                               caption: "River carved cliff along trail to Ousel Falls"))
         Image.addImage( Image(id: eUId.phOFP_GallatinBridge.rawValue,
                               rName: "OFP_GallatinRiverBridge.jpg",

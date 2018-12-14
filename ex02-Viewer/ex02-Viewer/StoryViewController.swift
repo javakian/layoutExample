@@ -7,8 +7,8 @@ import UIKit
 import Layout
 import Model
 
-class StoryViewController: UIViewController, LayoutLoading,
-                           UITableViewDataSource, UITableViewDelegate, TableViewLayout {
+final class StoryViewController: UIViewController, LayoutLoading,
+                                 UITableViewDataSource, UITableViewDelegate, TableViewLayout {
     @IBOutlet   var storyTableView: UITableView? {
                     didSet { if let view = self.storyTableView {
                                 self.registerTableCells(tableView: view ) }
@@ -27,7 +27,6 @@ class StoryViewController: UIViewController, LayoutLoading,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loadLayout(named:    "StoryView.xml",
                    constants: [
                     "navBarBottom": self.navigationController!.navigationBar.bounds.height
@@ -56,11 +55,15 @@ class StoryViewController: UIViewController, LayoutLoading,
             "rowDetail": detail,
             "image":     image,
             "hideImage": isLarge
-
             ])
         return node.view as! UITableViewCell
     }
     // MARK: UITableViewDelegate
+    internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chapterId = self.story.aChapterId[ indexPath.row ]
+        let chapterVC = ChapterViewController(chapterId: chapterId )
+        self.navigationController?.pushViewController( chapterVC, animated: true )
+    }
     internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let factor = CGFloat( self.rowHeightFactor(view: tableView ) )
         return tableView.estimatedRowHeight * factor
