@@ -1,6 +1,8 @@
 <UITableView
-    top                  ="{navBarBottom}"
     estimatedRowHeight   ="55"
     backgroundColor      ="#bbb"
-    bottom               ="parent.bottom"/>
+    left                 ="safeAreaInsets.left"
+    right                ="safeAreaInsets.right"
+    top                  ="safeAreaInsets.top"
+    bottom               ="safeAreaInsets.bottom"/>
 

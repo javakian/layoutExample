@@ -8,7 +8,6 @@ import AVFoundation
 public final class Movie: UniqueId {
     public  let resourceName:    String
     public  var caption:         String?
-    private var _avPlayer:       AVPlayer?
     
     public  init( id:       Int?,
                   rName:    String,
@@ -19,12 +18,9 @@ public final class Movie: UniqueId {
     }
     
     public func loadAVPlayer() -> AVPlayer {
-        if ( _avPlayer == nil ) {
-            let bundle = Bundle(for: type(of: self ))
-            let url    = bundle.url(forResource: self.resourceName, withExtension: nil )!
-            _avPlayer  = AVPlayer(url: url )
-        }
-        return _avPlayer! 
+        let bundle = Bundle(for: type(of: self ))
+        let url    = bundle.url(forResource: self.resourceName, withExtension: nil )!
+        return AVPlayer(url: url )
     }
     // MARK: static
     private static var  globalDictionaryById    =    [Int: Movie]()

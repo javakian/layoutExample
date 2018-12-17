@@ -26,16 +26,16 @@
     </UICollectionViewCell>
     
     <UICollectionViewCell
-        clipsToBounds   ="true"
-        reuseIdentifier ="chapterMovieCell">
+        clipsToBounds               ="true"
+        reuseIdentifier             ="chapterMovieCell">
         <AVPlayerViewController
             player                  ="{avPlayer}"
             showsPlaybackControls   ="false"/>
     </UICollectionViewCell>
     
     <UICollectionViewCell
-        clipsToBounds   ="true"
-        reuseIdentifier ="chapterTextCell">
+        clipsToBounds       ="true"
+        reuseIdentifier     ="chapterTextCell">
         <UILabel
             text            ="{cellText}"
             font            ="Futura body"

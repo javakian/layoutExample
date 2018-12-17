@@ -26,10 +26,11 @@ final class ChapterViewController: UIViewController, LayoutLoading,
     override func viewDidLoad() {
         super.viewDidLoad()
         loadLayout(named:    "ChapterView.xml",
-                   constants: [
-                    "navBarBottom": self.navigationController!.navigationBar.bounds.height
-            ] )
+                   constants: [String: Any]())
         self.navigationItem.title = self.chapter.title
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play,
+                                                                 target: self,
+                                                                 action: #selector(_playButtonPress(sender:)))
     }
     
     // MARK: UICollectionViewDataSource
@@ -56,6 +57,7 @@ final class ChapterViewController: UIViewController, LayoutLoading,
         } while( false )
         return node!.view as! UICollectionViewCell
     }
+    // MARK: private
     private func _imageAssetNodeCell( _ imageAsset:   Image,
                                       collectionView: UICollectionView,
                                       indexPath:      IndexPath ) -> LayoutNode {
@@ -87,14 +89,9 @@ final class ChapterViewController: UIViewController, LayoutLoading,
             ])
         return node
     }
-}
-
-extension AVPlayerViewController {
-    open override class func create(with node: LayoutNode) throws -> AVPlayerViewController {
-        let avController = self.init()
-        let avSession = AVAudioSession.sharedInstance()
-        try! avSession.setCategory( .playback, mode: .moviePlayback, options: .duckOthers )
-        return avController
+    @objc private func _playButtonPress( sender: UIBarButtonItem ) {
+        let aAssetId = self.chapter.aUniqueId 
+        let playVC   = PlayViewController(assetIds: aAssetId )
+        self.navigationController?.pushViewController( playVC, animated: true )
     }
 }
-

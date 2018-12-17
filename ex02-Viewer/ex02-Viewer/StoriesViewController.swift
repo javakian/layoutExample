@@ -20,10 +20,8 @@ final class StoriesViewController: UIViewController, LayoutLoading,
         super.viewDidLoad()
         storyIds = Story.storyIds()
         
-        loadLayout(named:    "StoriesView.xml",
-                   constants: [
-                        "navBarBottom": self.navigationController!.navigationBar.bounds.height
-                              ] )
+        loadLayout(named:     "StoriesView.xml",
+                   constants: [String: Any]())
         self.navigationItem.title = "Stories"
     }
 

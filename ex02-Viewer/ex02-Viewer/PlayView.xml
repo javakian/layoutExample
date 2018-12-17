@@ -1,22 +1,50 @@
 <UIView
-    backgroundColor                 ="#ccc">
+    top                             ="safeAreaInsets.top"
+    bottom                          ="safeAreaInsets.bottom"
+    backgroundColor                 ="#ccc"
+    >
     <UIImageView
+        isHidden                    ="imageHidden"
         outlet                      ="imageView"
         contentMode                 ="scaleAspectFit"
         width                       ="100%"
-        height                      ="parent.height - 94"
-        top                         ="{navBarBottom}"
+        height                      ="parent.height - labelHeight"
         backgroundColor             ="#999"
-        left                        ="//10"
-        right                       ="//300"
     />
     <UILabel
-        outlet                      ="captionLabel"
+        isHidden                    ="captionHidden"
+        outlet                      ="captionView"
         font                        ="Futura body"
-        top                         ="previous.bottom"
-        height                      ="50"
+        top                         ="parent.height - labelHeight"
+        height                      ="labelHeight"
         width                       ="100%"
         textAlignment               ="center"
         backgroundColor             ="#aaa"
-    />
+        adjustsFontSizeToFitWidth   ="true"
+        numberOfLines               ="1"
+        lineBreakMode               ="byTruncatingTail"
+        />
+    <UILabel
+        isHidden                    ="textHidden"
+        outlet                      ="textView"
+        font                        ="Futura body"
+        height                      ="parent.height"
+        width                       ="100%"
+        textAlignment               ="center"
+        backgroundColor             ="#888"
+        numberOfLines               ="0"
+        lineBreakMode               ="byWordWrapping"
+        />
+    <UIView
+        isHidden                    ="movieHidden"
+        outlet                      ="movieView"
+        width                       ="100%"
+        height                      ="parent.height - labelHeight"
+        backgroundColor             ="#777"
+        >
+        <AVPlayerViewController
+            outlet                  ="avController"
+            showsPlaybackControls   ="true"
+        />
+    </UIView>
 </UIView>
