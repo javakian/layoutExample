@@ -1,0 +1,22 @@
+<UIView
+    backgroundColor                 ="#ccc">
+    <UIImageView
+        outlet                      ="imageView"
+        contentMode                 ="scaleAspectFit"
+        width                       ="100%"
+        height                      ="parent.height - 94"
+        top                         ="{navBarBottom}"
+        backgroundColor             ="#999"
+        left                        ="//10"
+        right                       ="//300"
+    />
+    <UILabel
+        outlet                      ="captionLabel"
+        font                        ="Futura body"
+        top                         ="previous.bottom"
+        height                      ="50"
+        width                       ="100%"
+        textAlignment               ="center"
+        backgroundColor             ="#aaa"
+    />
+</UIView>

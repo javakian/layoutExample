@@ -18,10 +18,10 @@
         clipsToBounds   ="true"
         reuseIdentifier ="chapterImageCell">
         <UIImageView
-            contentMode="scaleAspectFit"
-            height="100%"
-            image="{image}"
-            width="100%"
+            contentMode ="scaleAspectFit"
+            height      ="100%"
+            image       ="{image}"
+            width       ="100%"
         />
     </UICollectionViewCell>
     

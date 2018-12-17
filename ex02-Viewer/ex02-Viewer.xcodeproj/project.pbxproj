@@ -24,6 +24,8 @@
 		8349CFAC21C1D38700FCE7D4 /* StoryView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8349CFAB21C1D38700FCE7D4 /* StoryView.xml */; };
 		83DD4F8A21C42B64000DB1FF /* ChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DD4F8921C42B64000DB1FF /* ChapterViewController.swift */; };
 		83DD4F8C21C42FD5000DB1FF /* ChapterView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 83DD4F8B21C42FD5000DB1FF /* ChapterView.xml */; };
+		83F5D69B21C5C2D1001B741E /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F5D69A21C5C2D1001B741E /* PlayViewController.swift */; };
+		83F5D69D21C5C55A001B741E /* PlayView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 83F5D69C21C5C55A001B741E /* PlayView.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +61,8 @@
 		8349CFAB21C1D38700FCE7D4 /* StoryView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StoryView.xml; sourceTree = "<group>"; };
 		83DD4F8921C42B64000DB1FF /* ChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterViewController.swift; sourceTree = "<group>"; };
 		83DD4F8B21C42FD5000DB1FF /* ChapterView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ChapterView.xml; sourceTree = "<group>"; };
+		83F5D69A21C5C2D1001B741E /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		83F5D69C21C5C55A001B741E /* PlayView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PlayView.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				8349CFAB21C1D38700FCE7D4 /* StoryView.xml */,
 				83DD4F8921C42B64000DB1FF /* ChapterViewController.swift */,
 				83DD4F8B21C42FD5000DB1FF /* ChapterView.xml */,
+				83F5D69A21C5C2D1001B741E /* PlayViewController.swift */,
+				83F5D69C21C5C55A001B741E /* PlayView.xml */,
 				833D809621C310B3006FE33F /* TableViewLayout.swift */,
 				833D809021C2D2AA006FE33F /* TableViewTemplate.xml */,
 				833D809221C2FBB5006FE33F /* TableCellStandard.xml */,
@@ -176,6 +182,7 @@
 				8349CFAC21C1D38700FCE7D4 /* StoryView.xml in Resources */,
 				833D809521C30CAE006FE33F /* TableCellLarge.xml in Resources */,
 				833D809321C2FBB5006FE33F /* TableCellStandard.xml in Resources */,
+				83F5D69D21C5C55A001B741E /* PlayView.xml in Resources */,
 				833D809121C2D2AA006FE33F /* TableViewTemplate.xml in Resources */,
 				8320CD2021C04DF1009735BC /* StoriesView.xml in Resources */,
 				8320CD1121C045BC009735BC /* LaunchScreen.storyboard in Resources */,
@@ -194,6 +201,7 @@
 				8349CFAA21C1CFA900FCE7D4 /* StoryViewController.swift in Sources */,
 				833D809721C310B3006FE33F /* TableViewLayout.swift in Sources */,
 				8320CD0921C045BB009735BC /* StoriesViewController.swift in Sources */,
+				83F5D69B21C5C2D1001B741E /* PlayViewController.swift in Sources */,
 				8320CD0721C045BB009735BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

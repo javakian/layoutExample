@@ -27,6 +27,15 @@ public final class Story: UniqueId {
         let imageAsset = Image.getById( eUId.phMOR_Bear.rawValue )!
         return imageAsset.loadUIImage()
     }
+    public  func   allContentId() -> [Int] {
+        var aId = [Int]()
+        for chapterId in aChapterId {
+            if let chapter = Chapter.getById( chapterId ) {
+                aId.append(contentsOf: chapter.aUniqueId )
+            }
+        }
+        return aId 
+    }
     // MARK: static
     private static var  globalDictionaryById    =    [Int: Story]()
     public  static func getById( _ id_: Int ) -> Story? {

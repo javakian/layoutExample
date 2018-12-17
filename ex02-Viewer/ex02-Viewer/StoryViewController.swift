@@ -32,6 +32,9 @@ final class StoryViewController: UIViewController, LayoutLoading,
                     "navBarBottom": self.navigationController!.navigationBar.bounds.height
             ] )
         self.navigationItem.title = self.story.label
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play,
+                                                                 target: self,
+                                                                 action: #selector(_playButtonPress(sender:)))
     }
     
     
@@ -67,6 +70,12 @@ final class StoryViewController: UIViewController, LayoutLoading,
     internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let factor = CGFloat( self.rowHeightFactor(view: tableView ) )
         return tableView.estimatedRowHeight * factor
+    }
+    // MARK: private
+    @objc private func _playButtonPress( sender: UIBarButtonItem ) {
+        let aAssetId = self.story.allContentId()
+        let playVC   = PlayViewController(assetIds: aAssetId )
+        self.navigationController?.pushViewController( playVC, animated: true )
     }
 }
 
