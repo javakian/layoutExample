@@ -57,6 +57,11 @@ final class ChapterViewController: UIViewController, LayoutLoading,
         } while( false )
         return node!.view as! UICollectionViewCell
     }
+    // MARK: UICollectionViewDelegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let assetId     = self.chapter.aUniqueId[ indexPath.row ]
+        self._showPlayView(assetIds: [ assetId ])
+    }
     // MARK: private
     private func _imageAssetNodeCell( _ imageAsset:   Image,
                                       collectionView: UICollectionView,
@@ -90,8 +95,10 @@ final class ChapterViewController: UIViewController, LayoutLoading,
         return node
     }
     @objc private func _playButtonPress( sender: UIBarButtonItem ) {
-        let aAssetId = self.chapter.aUniqueId 
-        let playVC   = PlayViewController(assetIds: aAssetId )
+        self._showPlayView(assetIds: self.chapter.aUniqueId )
+    }
+    private func _showPlayView( assetIds: [Int] ) {
+        let playVC   = PlayViewController(assetIds: assetIds )
         self.navigationController?.pushViewController( playVC, animated: true )
     }
 }

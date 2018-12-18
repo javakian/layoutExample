@@ -1,6 +1,8 @@
 <UIView
     top                             ="safeAreaInsets.top"
     bottom                          ="safeAreaInsets.bottom"
+    left                            ="safeAreaInsets.left"
+    right                           ="safeAreaInsets.right"
     backgroundColor                 ="#ccc"
     >
     <UIImageView
@@ -9,7 +11,7 @@
         contentMode                 ="scaleAspectFit"
         width                       ="100%"
         height                      ="parent.height - labelHeight"
-        backgroundColor             ="#999"
+        backgroundColor             ="#ccc"
     />
     <UILabel
         isHidden                    ="captionHidden"
@@ -19,7 +21,7 @@
         height                      ="labelHeight"
         width                       ="100%"
         textAlignment               ="center"
-        backgroundColor             ="#aaa"
+        backgroundColor             ="#ccc"
         adjustsFontSizeToFitWidth   ="true"
         numberOfLines               ="1"
         lineBreakMode               ="byTruncatingTail"
@@ -30,8 +32,8 @@
         font                        ="Futura body"
         height                      ="parent.height"
         width                       ="100%"
-        textAlignment               ="center"
-        backgroundColor             ="#888"
+        textAlignment               ="left"
+        backgroundColor             ="#ccc"
         numberOfLines               ="0"
         lineBreakMode               ="byWordWrapping"
         />
@@ -40,7 +42,7 @@
         outlet                      ="movieView"
         width                       ="100%"
         height                      ="parent.height - labelHeight"
-        backgroundColor             ="#777"
+        backgroundColor             ="#ccc"
         >
         <AVPlayerViewController
             outlet                  ="avController"

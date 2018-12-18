@@ -111,7 +111,7 @@ public class AssetsStory01 {
                                             eUId.chEarthquakeLake.rawValue]))
     }
     private static func loadText() {
-        let p1a = Para(head: Heading( .h1, "Museum of the Rockies"),
+        let p1a = Para(head: Heading( .h2, "Museum of the Rockies"),
                        aBody: [Body(.list, "Bozeman, Montana"), Body(.list, "July 24, 2017")] )
         let p1b = Para(head: nil,
                        aBody: [Body(.text, "Inside has geology, dinosaurs, pioneer and native history, and a planetarium."),

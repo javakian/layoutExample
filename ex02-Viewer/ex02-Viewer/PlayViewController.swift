@@ -43,7 +43,7 @@ final class PlayViewController: UIViewController, LayoutLoading {
         case movieHidden   = "movieHidden"
         case textHidden    = "textHidden"
     }
-    private var  _viewState = [
+    private var  _viewState: [String: Bool] = [
         _stateValues.captionHidden.rawValue: false,
         _stateValues.imageHidden.rawValue:   false,
         _stateValues.movieHidden.rawValue:   true,
@@ -118,8 +118,16 @@ final class PlayViewController: UIViewController, LayoutLoading {
         player.play()
     }
     private func _showTextAsset( _ textAsset: Text ) -> Void {
+        let htmlBuilder = HtmlBuilder()
+        textAsset.addToBuilder( htmlBuilder )
+        htmlBuilder.finish()
+        let htmlData = htmlBuilder.product()
+        let htmlOpts = [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html ]
+        let attribString =  try! NSAttributedString(data:    htmlData,
+                                                    options: htmlOpts,
+                                                    documentAttributes: nil )
+        self.textView?.attributedText = attribString 
         self._setVisibleView( textView! )
-        textView?.text = textAsset.aPara[0].getSummary()
         self._launchTimer(seconds: 6.0 )
     }
     private func _launchTimer( seconds: TimeInterval ) -> Void {
