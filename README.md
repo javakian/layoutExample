@@ -20,11 +20,11 @@
 [l20]: https://developer.apple.com/videos/play/wwdc2017/245
 [l21]: https://github.com/nicklockwood/layout#uinavigationcontroller
 [l22]: https://developer.apple.com/documentation/avkit/avplayerviewcontroller
-[l22]: https://github.com/chh51/layoutExample/wiki
-[l23]: https://github.com/nicklockwood/layout
+[l23]: https://github.com/chh51/layoutExample/wiki
+[l24]: https://github.com/nicklockwood/layout
 
 # layoutExample
-[Real world examples][l22] using [nicklockwood/layout][l23]
+[Real world examples][l23] using [nicklockwood/layout][l24]
 
 | Layout Feature ⇩ . . . . Used in Example ➱|  1   |  2  |  3  |  4  |  5  |
 |:------------------------------------------|:----:|:---:|:---:|:---:|:---:|
