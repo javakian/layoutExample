@@ -1,6 +1,6 @@
 <UITableView
     estimatedRowHeight   ="55"
-    backgroundColor      ="#bbb"
+    backgroundColor      ="backgrndColor"
     left                 ="safeAreaInsets.left"
     right                ="safeAreaInsets.right"
     top                  ="safeAreaInsets.top"

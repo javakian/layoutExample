@@ -26,7 +26,7 @@ final class ChapterViewController: UIViewController, LayoutLoading,
     override func viewDidLoad() {
         super.viewDidLoad()
         loadLayout(named:    "ChapterView.xml",
-                   constants: [String: Any]())
+                   constants: StoriesViewController.globalLayoutConstants)
         self.navigationItem.title = self.chapter.title
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play,
                                                                  target: self,

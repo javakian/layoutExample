@@ -28,7 +28,7 @@ final class StoryViewController: UIViewController, LayoutLoading,
     override func viewDidLoad() {
         super.viewDidLoad()
         loadLayout(named:    "StoryView.xml",
-                   constants: [String: Any]())
+                   constants: StoriesViewController.globalLayoutConstants)
         self.navigationItem.title = self.story.label
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play,
                                                                  target: self,

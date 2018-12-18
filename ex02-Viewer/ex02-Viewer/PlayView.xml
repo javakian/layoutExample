@@ -1,52 +1,56 @@
 <UIView
-    top                             ="safeAreaInsets.top"
-    bottom                          ="safeAreaInsets.bottom"
-    left                            ="safeAreaInsets.left"
-    right                           ="safeAreaInsets.right"
-    backgroundColor                 ="#ccc"
+    backgroundColor                 ="backgrndColor"
     >
-    <UIImageView
-        isHidden                    ="imageHidden"
-        outlet                      ="imageView"
-        contentMode                 ="scaleAspectFit"
-        width                       ="100%"
-        height                      ="parent.height - labelHeight"
-        backgroundColor             ="#ccc"
-    />
-    <UILabel
-        isHidden                    ="captionHidden"
-        outlet                      ="captionView"
-        font                        ="Futura body"
-        top                         ="parent.height - labelHeight"
-        height                      ="labelHeight"
-        width                       ="100%"
-        textAlignment               ="center"
-        backgroundColor             ="#ccc"
-        adjustsFontSizeToFitWidth   ="true"
-        numberOfLines               ="1"
-        lineBreakMode               ="byTruncatingTail"
-        />
-    <UILabel
-        isHidden                    ="textHidden"
-        outlet                      ="textView"
-        font                        ="Futura body"
-        height                      ="parent.height"
-        width                       ="100%"
-        textAlignment               ="left"
-        backgroundColor             ="#ccc"
-        numberOfLines               ="0"
-        lineBreakMode               ="byWordWrapping"
-        />
     <UIView
-        isHidden                    ="movieHidden"
-        outlet                      ="movieView"
-        width                       ="100%"
-        height                      ="parent.height - labelHeight"
-        backgroundColor             ="#ccc"
+        top                             ="safeAreaInsets.top"
+        bottom                          ="safeAreaInsets.bottom"
+        left                            ="safeAreaInsets.left"
+        right                           ="safeAreaInsets.right"
         >
-        <AVPlayerViewController
-            outlet                  ="avController"
-            showsPlaybackControls   ="true"
+        <UIImageView
+            isHidden                    ="imageHidden"
+            outlet                      ="imageView"
+            contentMode                 ="scaleAspectFit"
+            width                       ="100%"
+            height                      ="parent.height - labelHeight"
+            backgroundColor             ="backgrndColor"
         />
+        <UILabel
+            isHidden                    ="captionHidden"
+            outlet                      ="captionView"
+            font                        ="Futura body"
+            top                         ="parent.height - labelHeight"
+            height                      ="labelHeight"
+            width                       ="100%"
+            textAlignment               ="center"
+            backgroundColor             ="backgrndColor"
+            adjustsFontSizeToFitWidth   ="true"
+            numberOfLines               ="1"
+            lineBreakMode               ="byTruncatingTail"
+            />
+        <UILabel
+            isHidden                    ="textHidden"
+            outlet                      ="textView"
+            font                        ="Futura body"
+            height                      ="parent.height"
+            width                       ="100%"
+            textAlignment               ="left"
+            backgroundColor             ="backgrndColor"
+            numberOfLines               ="0"
+            lineBreakMode               ="byWordWrapping"
+            />
+        <UIView
+            isHidden                    ="movieHidden"
+            outlet                      ="movieView"
+            width                       ="100%"
+            height                      ="parent.height - labelHeight"
+            backgroundColor             ="backgrndColor"
+            >
+            <AVPlayerViewController
+                outlet                  ="avController"
+                view.backgroundColor    ="backgrndColor"
+                showsPlaybackControls   ="true"
+            />
+        </UIView>
     </UIView>
 </UIView>

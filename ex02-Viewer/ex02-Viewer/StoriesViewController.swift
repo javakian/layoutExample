@@ -21,9 +21,13 @@ final class StoriesViewController: UIViewController, LayoutLoading,
         storyIds = Story.storyIds()
         
         loadLayout(named:     "StoriesView.xml",
-                   constants: [String: Any]())
+                   constants: StoriesViewController.globalLayoutConstants )
         self.navigationItem.title = "Stories"
     }
+    // MARK: static
+    public static let globalLayoutConstants: [String: Any] = [
+        "backgrndColor"     : UIColor.lightGray
+    ]
 
 
     // MARK: UITableViewDataSource

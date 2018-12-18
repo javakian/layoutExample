@@ -1,5 +1,5 @@
 <UICollectionView
-    backgroundColor                                 ="white"
+    backgroundColor                                 ="backgrndColor"
     collectionViewLayout.itemSize.height            ="collectionViewLayout.itemSize.width"
     collectionViewLayout.itemSize.width             ="(100% - 6 * 10) / 2"
     collectionViewLayout.minimumInteritemSpacing    ="10"

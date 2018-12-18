@@ -1,5 +1,5 @@
 <UIViewController
-    view.backgroundColor     ="white">
+    view.backgroundColor     ="backgrndColor">
     <UITableView
         template             ="TableViewTemplate.xml"
         outlet               ="storyTableView">

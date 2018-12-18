@@ -33,10 +33,11 @@ final class PlayViewController: UIViewController, LayoutLoading {
         super.viewDidLoad()
         loadLayout(named:    "PlayView.xml",
                    state:    self._viewState,
-                   constants: ["labelHeight" : 44 ])
+                   constants: StoriesViewController.globalLayoutConstants,
+                              ["labelHeight" : 44 ])
         self._showCurrentAsset()
     }
-    // MARK: private
+    // MARK: private - visible view
     private enum _stateValues: String {
         case captionHidden = "captionHidden"
         case imageHidden   = "imageHidden"
