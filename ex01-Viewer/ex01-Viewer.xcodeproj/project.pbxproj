@@ -61,10 +61,10 @@
 		837CCB7F21BB0EE700BDCD6E = {
 			isa = PBXGroup;
 			children = (
-				8320CCF621C04364009735BC /* Layout.framework */,
-				8320CCF221C04350009735BC /* Model.framework */,
 				837CCB8A21BB0EE700BDCD6E /* ex01-Viewer */,
 				837CCB8921BB0EE700BDCD6E /* Products */,
+				8320CCF621C04364009735BC /* Layout.framework */,
+				8320CCF221C04350009735BC /* Model.framework */,
 			);
 			sourceTree = "<group>";
 		};
