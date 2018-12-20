@@ -10,7 +10,7 @@
         template        ="TableViewTemplate.xml"
         height          ="parent.height - TOOLBARHEIGHT"
     />
-    <UIToolbar
+    <StoriesViewToolbar
         outlet          ="storiesToolbar"
         top             ="previous.bottom"
         height          ="TOOLBARHEIGHT"

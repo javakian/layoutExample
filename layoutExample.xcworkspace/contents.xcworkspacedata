@@ -16,4 +16,7 @@
    <FileRef
       location = "group:/Users/chris/PlayArea/layoutExample/layout/Layout.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Interface/Interface.xcodeproj">
+   </FileRef>
 </Workspace>

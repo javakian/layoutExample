@@ -1,7 +1,7 @@
 //  StoriesViewController.swift
 //  ex04-Viewer
 //
-//  Created by CHH51 on 12/6/18.
+//  Created by CHH51 on 12/19/18.
 
 import UIKit
 import Layout
@@ -10,14 +10,9 @@ import Model
 final class StoriesViewController: UIViewController, LayoutLoading,
                                    UITableViewDataSource, UITableViewDelegate, TableViewLayout {
     @IBOutlet   var storiesTableView: UITableView?
-    @IBOutlet   var storiesToolbar:   UIToolbar? {
+    @IBOutlet   var storiesToolbar:   StoriesViewToolbar? {
                         didSet { if let toolbar = self.storiesToolbar {
-                                    self._toolbarSetup( toolbar ) }}}
-                let barItemMode       = UIBarButtonItem(barButtonSystemItem: .edit , target: self,
-                                                        action: #selector(_toolbarActionMode(sender_:)) )
-                let barItemHelp       = UIBarButtonItem(barButtonSystemItem: .refresh, target: self,
-                                                        action: #selector(_toolbarActionHelp(sender_:)))
-                let barItemSpace      = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil )
+                                    toolbar.toolbarSetup(controller: self ) }}}
                 var storyIds          = [Int]()
 
     override func viewDidLoad() {
@@ -64,21 +59,5 @@ final class StoriesViewController: UIViewController, LayoutLoading,
         let factor = CGFloat( self.rowHeightFactor(view: tableView ) )
         return tableView.estimatedRowHeight * factor
      }
-    // MARK: UIBarButtonItem actions and setup
-    @objc private func _toolbarActionHelp( sender_: UIBarButtonItem ) {
-        print("help")
-    }
-    @objc private func _toolbarActionMode( sender_: UIBarButtonItem ) {
-        print("mode")
-    }
-    private func _toolbarModeSet( item: UIBarButtonItem ) {
-        
-    }
-    private func _toolbarSetup( _ toolbar_: UIToolbar ) {
-        let items = [self.barItemMode, self.barItemSpace, self.barItemHelp ]
-        if ( toolbar_.items != items ) {
-            toolbar_.setItems( items, animated: false )
-        }
-    }
 }
 
