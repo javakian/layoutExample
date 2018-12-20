@@ -1,0 +1,37 @@
+<UITableView
+    estimatedRowHeight   ="55"
+    backgroundColor      ="backgrndColor"
+    >
+    <UITableViewCell
+        detailTextLabel.highlightedTextColor    ="#fff7"
+        detailTextLabel.text                    ="{rowDetail}"
+        detailTextLabel.textColor               ="#666"
+        detailTextLabel.font                    ="Courier headline"
+        detailTextLabel.numberOfLines           ="0"
+        reuseIdentifier                         ="tableCellStandard"
+        selectedBackgroundView.backgroundColor  ="tintColor"
+        style                                   ="subtitle"
+        textLabel.highlightedTextColor          ="white"
+        textLabel.font                          ="Futura body"
+        textLabel.numberOfLines                 ="0"
+        textLabel.text                          ="{rowTitle}">
+        <UIImageView
+            isHidden       ="{hideImage}"
+            image          ="{image}"
+            right          ="5"
+            top            ="5"
+            height         ="40"
+            width          ="60"
+            contentMode    ="scaleAspectFit"
+        />
+    </UITableViewCell>
+    <UITableViewCell
+        reuseIdentifier                         ="tableCellLarge"
+        selectedBackgroundView.backgroundColor  ="tintColor"
+        textLabel.highlightedTextColor          ="white"
+        textLabel.font                          ="Futura body"
+        textLabel.numberOfLines                 ="0"
+        textLabel.text                          ="{rowTitle}"
+    />
+</UITableView>
+

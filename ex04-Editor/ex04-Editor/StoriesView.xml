@@ -1,0 +1,21 @@
+<UIView
+    left            ="safeAreaInsets.left"
+    right           ="safeAreaInsets.right"
+    top             ="safeAreaInsets.top"
+    bottom          ="safeAreaInsets.bottom"
+>
+    <macro name="TOOLBARHEIGHT" value="44"/>
+    <UITableView
+        outlet          ="storiesTableView"
+        template        ="TableViewTemplate.xml"
+        height          ="parent.height - TOOLBARHEIGHT"
+    />
+    <UIToolbar
+        outlet          ="storiesToolbar"
+        top             ="previous.bottom"
+        height          ="TOOLBARHEIGHT"
+        width           ="100%"
+        backgroundColor ="white"
+    />
+</UIView>
+

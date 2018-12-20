@@ -1,5 +1,5 @@
 //  AppDelegate.swift
-//  ex02-Viewer
+//  ex04-Editor
 //
 //  Created by CHH51 on 12/6/18.
 
@@ -9,9 +9,7 @@ import Model
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
-
 
     func application(_                              : UIApplication,
                      didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -23,10 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navController     = UINavigationController(rootViewController: storiesController)
         
         window                      = UIWindow()
-        window?.rootViewController  = navController 
+        window?.rootViewController  = navController
         window?.makeKeyAndVisible()
         return true
     }
-
 }
 

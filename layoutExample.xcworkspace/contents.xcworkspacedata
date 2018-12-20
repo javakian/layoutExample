@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:README.md">
+      location = "group:ex04-Editor/ex04-Editor.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:ex02-Viewer/ex02-Viewer.xcodeproj">
