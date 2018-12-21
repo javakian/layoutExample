@@ -19,6 +19,8 @@
 		834B1D9C21CAE581002DE0FA /* TableViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B1D9821CAE581002DE0FA /* TableViewLayout.swift */; };
 		834B1D9D21CAE581002DE0FA /* TableViewTemplate.xml in Resources */ = {isa = PBXBuildFile; fileRef = 834B1D9921CAE581002DE0FA /* TableViewTemplate.xml */; };
 		834B1D9F21CAF7C8002DE0FA /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B1D9E21CAF7C8002DE0FA /* StateManager.swift */; };
+		836B754021CC5FB2005417AE /* Interface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836B753F21CC5FB2005417AE /* Interface.framework */; };
+		836B754121CC5FB2005417AE /* Interface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 836B753F21CC5FB2005417AE /* Interface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		83792D6C21CC1CDC001E01E4 /* StoriesViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83792D6B21CC1CDC001E01E4 /* StoriesViewToolbar.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,7 @@
 			files = (
 				830E246121CC060F00711D05 /* Layout.framework in Embed Frameworks */,
 				830E245D21CC060800711D05 /* Model.framework in Embed Frameworks */,
+				836B754121CC5FB2005417AE /* Interface.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +53,7 @@
 		834B1D9821CAE581002DE0FA /* TableViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewLayout.swift; sourceTree = "<group>"; };
 		834B1D9921CAE581002DE0FA /* TableViewTemplate.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TableViewTemplate.xml; sourceTree = "<group>"; };
 		834B1D9E21CAF7C8002DE0FA /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
+		836B753F21CC5FB2005417AE /* Interface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Interface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83792D6B21CC1CDC001E01E4 /* StoriesViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewToolbar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +64,7 @@
 			files = (
 				830E246021CC060F00711D05 /* Layout.framework in Frameworks */,
 				830E245C21CC060800711D05 /* Model.framework in Frameworks */,
+				836B754021CC5FB2005417AE /* Interface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,10 +74,11 @@
 		831B432C21CAE1BF00B51572 = {
 			isa = PBXGroup;
 			children = (
-				830E245F21CC060F00711D05 /* Layout.framework */,
-				830E245B21CC060800711D05 /* Model.framework */,
 				831B433721CAE1BF00B51572 /* ex04-Editor */,
 				831B433621CAE1BF00B51572 /* Products */,
+				836B753F21CC5FB2005417AE /* Interface.framework */,
+				830E245F21CC060F00711D05 /* Layout.framework */,
+				830E245B21CC060800711D05 /* Model.framework */,
 			);
 			sourceTree = "<group>";
 		};

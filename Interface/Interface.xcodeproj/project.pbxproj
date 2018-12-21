@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		836B753521CC5139005417AE /* AVKit+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B753421CC5139005417AE /* AVKit+Layout.swift */; };
+		836B753C21CC5AE6005417AE /* EasyTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B753B21CC5AE6005417AE /* EasyTipView.swift */; };
+		836B753E21CC5B84005417AE /* EasyTipView-UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B753D21CC5B84005417AE /* EasyTipView-UIKit.swift */; };
+		836B754321CD63D6005417AE /* LongTouchTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B754221CD63D6005417AE /* LongTouchTip.swift */; };
 		83792D7E21CC502C001E01E4 /* Interface.h in Headers */ = {isa = PBXBuildFile; fileRef = 83792D7C21CC502C001E01E4 /* Interface.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83792D8621CC50A2001E01E4 /* Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83792D8521CC50A2001E01E4 /* Layout.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		836B753421CC5139005417AE /* AVKit+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVKit+Layout.swift"; sourceTree = "<group>"; };
+		836B753B21CC5AE6005417AE /* EasyTipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyTipView.swift; sourceTree = "<group>"; };
+		836B753D21CC5B84005417AE /* EasyTipView-UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EasyTipView-UIKit.swift"; sourceTree = "<group>"; };
+		836B754221CD63D6005417AE /* LongTouchTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTouchTip.swift; sourceTree = "<group>"; };
 		83792D7921CC502C001E01E4 /* Interface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Interface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83792D7C21CC502C001E01E4 /* Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
 		83792D7D21CC502C001E01E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +38,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		836B753921CC59F6005417AE /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				836B753B21CC5AE6005417AE /* EasyTipView.swift */,
+				836B753D21CC5B84005417AE /* EasyTipView-UIKit.swift */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
 		83792D6F21CC502C001E01E4 = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +67,9 @@
 		83792D7B21CC502C001E01E4 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				836B753921CC59F6005417AE /* ThirdParty */,
 				836B753421CC5139005417AE /* AVKit+Layout.swift */,
+				836B754221CD63D6005417AE /* LongTouchTip.swift */,
 				83792D7C21CC502C001E01E4 /* Interface.h */,
 				83792D7D21CC502C001E01E4 /* Info.plist */,
 			);
@@ -146,7 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836B753C21CC5AE6005417AE /* EasyTipView.swift in Sources */,
+				836B754321CD63D6005417AE /* LongTouchTip.swift in Sources */,
 				836B753521CC5139005417AE /* AVKit+Layout.swift in Sources */,
+				836B753E21CC5B84005417AE /* EasyTipView-UIKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
