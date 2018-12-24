@@ -1,4 +1,9 @@
-<UIView>
+<UIView
+    left            ="safeAreaInsets.left"
+    right           ="safeAreaInsets.right"
+    top             ="safeAreaInsets.top"
+    bottom          ="safeAreaInsets.bottom"
+    >
     <UICollectionView
         outlet                                          ="chapterCollectionView"
         height                                          ="parent.height - toolBarHeight_Int"
@@ -7,14 +12,10 @@
         collectionViewLayout.itemSize.width             ="(100% - 6 * 10) / 2"
         collectionViewLayout.minimumInteritemSpacing    ="10"
         collectionViewLayout.scrollDirection            ="vertical"
-        contentInset.bottom                             ="safeAreaInsets.bottom"
         contentInset.left                               ="10"
         contentInset.right                              ="10"
-        contentInset.top                                ="safeAreaInsets.top"
         contentInsetAdjustmentBehavior                  ="never"
-        contentOffset.y                                 ="-safeAreaInsets.top"
-        scrollIndicatorInsets.bottom                    ="safeAreaInsets.bottom"
-        scrollIndicatorInsets.top                       ="safeAreaInsets.top">
+        >
         
         <UICollectionViewCell
             clipsToBounds   ="true"
@@ -31,8 +32,9 @@
             clipsToBounds               ="true"
             reuseIdentifier             ="chapterMovieCell">
             <AVPlayerViewController
-                player                  ="{avPlayer}"
-                showsPlaybackControls   ="false"
+                player                        ="{avPlayer}"
+                view.isUserInteractionEnabled = "false"
+                showsPlaybackControls         ="false"
             />
         </UICollectionViewCell>
         

@@ -86,10 +86,9 @@ final class StoryViewController: UIViewController, LayoutLoading, EditToolbarDel
     
     // MARK: private
     @objc private func  _playButtonPress( sender: UIBarButtonItem ) {
-        print("not implemented yet")
-//        let aAssetId = self.story!.allContentId()
-//        let playVC   = PlayViewController(assetIds: aAssetId )
-//        self.navigationController?.pushViewController( playVC, animated: true )
+        let playVC   = PlayViewController()
+        playVC.aAssetId = self.story!.allContentId()
+        self.navigationController?.pushViewController( playVC, animated: true )
     }
     private func        _updateToolbar() {
         self.editToolbar?.barItemReorder.isEnabled = ( self.story?.aChapterId.count ?? 0 ) > 1

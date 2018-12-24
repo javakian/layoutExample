@@ -98,7 +98,9 @@ final class ChapterViewController: UIViewController, LayoutLoading, EditToolbarD
         node.setState([
             "avPlayer":     player
             ])
-        player.play()
+        if ( !StateManager.singleton.getStateBool(.isEditMode_Bool)) {
+            player.play()
+        }
         return node
     }
     private func _textAssetNodeCell( _ textAsset:     Text,
@@ -114,7 +116,8 @@ final class ChapterViewController: UIViewController, LayoutLoading, EditToolbarD
         self._showPlayView(assetIds: self.chapter!.aUniqueId )
     }
     private func _showPlayView( assetIds: [Int] ) {
-//        let playVC   = PlayViewController(assetIds: assetIds )
-//        self.navigationController?.pushViewController( playVC, animated: true )
+        let playVC   = PlayViewController()
+        playVC.aAssetId = assetIds 
+        self.navigationController?.pushViewController( playVC, animated: true )
     }
 }

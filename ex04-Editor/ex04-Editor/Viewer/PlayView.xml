@@ -1,0 +1,64 @@
+<UIView
+    backgroundColor                 ="backgrndColor"
+    >
+    <UIView
+        top                             ="safeAreaInsets.top"
+        bottom                          ="safeAreaInsets.bottom"
+        left                            ="safeAreaInsets.left"
+        right                           ="safeAreaInsets.right"
+        >
+        <UIImageView
+            isHidden                    ="imageHidden"
+            outlet                      ="imageView"
+            contentMode                 ="scaleAspectFit"
+            width                       ="100%"
+            height                      ="parent.height - labelHeight - toolBarHeight_Int"
+            backgroundColor             ="backgrndColor"
+        />
+        <UILabel
+            isHidden                    ="textHidden"
+            outlet                      ="textView"
+            font                        ="Futura body"
+            height                      ="parent.height - toolBarHeight_Int"
+            width                       ="100%"
+            textAlignment               ="left"
+            backgroundColor             ="backgrndColor"
+            numberOfLines               ="0"
+            lineBreakMode               ="byWordWrapping"
+        />
+        <UIView
+            isHidden                    ="movieHidden"
+            outlet                      ="movieView"
+            width                       ="100%"
+            height                      ="parent.height - labelHeight - toolBarHeight_Int"
+            backgroundColor             ="backgrndColor"
+            >
+            <AVPlayerViewController
+                outlet                  ="avController"
+                view.backgroundColor    ="backgrndColor"
+                showsPlaybackControls   ="true"
+            />
+        </UIView>
+        <UILabel
+            isHidden                    ="captionHidden"
+            outlet                      ="captionView"
+            font                        ="Futura body"
+            top                         ="parent.height - labelHeight - toolBarHeight_Int"
+            height                      ="labelHeight"
+            width                       ="100%"
+            textAlignment               ="center"
+            backgroundColor             ="backgrndColor"
+            adjustsFontSizeToFitWidth   ="true"
+            numberOfLines               ="1"
+            lineBreakMode               ="byTruncatingTail"
+        />
+        <EditToolbar
+            outlet          ="editToolbar"
+            top             ="previous.bottom"
+            height          ="toolBarHeight_Int"
+            width           ="100%"
+            backgroundColor ="white"
+        />
+    </UIView>
+</UIView>
+
