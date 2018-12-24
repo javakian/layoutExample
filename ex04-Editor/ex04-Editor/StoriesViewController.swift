@@ -51,13 +51,14 @@ final class StoriesViewController: UIViewController, LayoutLoading,
     
     // MARK: UITableViewDelegate
     internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyId = self.storyIds[ indexPath.row ]
-//        let storyVC = StoryViewController(storyId: storyId )
-//        self.navigationController?.pushViewController( storyVC, animated: true )
+        let storyId   = self.storyIds[ indexPath.row ]
+        let storyVC   = StoryViewController()
+        storyVC.story = Story.getById( storyId )
+        self.navigationController?.pushViewController( storyVC, animated: true )
     }
     internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let factor = CGFloat( self.rowHeightFactor(view: tableView ) )
         return tableView.estimatedRowHeight * factor
-     }
+    }
 }
 

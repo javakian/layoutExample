@@ -19,9 +19,14 @@
 		834B1D9C21CAE581002DE0FA /* TableViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B1D9821CAE581002DE0FA /* TableViewLayout.swift */; };
 		834B1D9D21CAE581002DE0FA /* TableViewTemplate.xml in Resources */ = {isa = PBXBuildFile; fileRef = 834B1D9921CAE581002DE0FA /* TableViewTemplate.xml */; };
 		834B1D9F21CAF7C8002DE0FA /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B1D9E21CAF7C8002DE0FA /* StateManager.swift */; };
+		8350EC5821CF0F85004994F2 /* StoryView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8350EC5721CF0F85004994F2 /* StoryView.xml */; };
+		8350EC5A21CF1001004994F2 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8350EC5921CF1001004994F2 /* StoryViewController.swift */; };
+		8350EC5C21CF153B004994F2 /* EditToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8350EC5B21CF153B004994F2 /* EditToolbar.swift */; };
 		836B754021CC5FB2005417AE /* Interface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836B753F21CC5FB2005417AE /* Interface.framework */; };
 		836B754121CC5FB2005417AE /* Interface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 836B753F21CC5FB2005417AE /* Interface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		83792D6C21CC1CDC001E01E4 /* StoriesViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83792D6B21CC1CDC001E01E4 /* StoriesViewToolbar.swift */; };
+		83D908E221D15F4B001B8F35 /* ChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D908E121D15F4B001B8F35 /* ChapterViewController.swift */; };
+		83D908E421D1600B001B8F35 /* ChapterView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 83D908E321D1600B001B8F35 /* ChapterView.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,8 +58,13 @@
 		834B1D9821CAE581002DE0FA /* TableViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewLayout.swift; sourceTree = "<group>"; };
 		834B1D9921CAE581002DE0FA /* TableViewTemplate.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TableViewTemplate.xml; sourceTree = "<group>"; };
 		834B1D9E21CAF7C8002DE0FA /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
+		8350EC5721CF0F85004994F2 /* StoryView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StoryView.xml; sourceTree = "<group>"; };
+		8350EC5921CF1001004994F2 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		8350EC5B21CF153B004994F2 /* EditToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditToolbar.swift; sourceTree = "<group>"; };
 		836B753F21CC5FB2005417AE /* Interface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Interface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83792D6B21CC1CDC001E01E4 /* StoriesViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewToolbar.swift; sourceTree = "<group>"; };
+		83D908E121D15F4B001B8F35 /* ChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterViewController.swift; sourceTree = "<group>"; };
+		83D908E321D1600B001B8F35 /* ChapterView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ChapterView.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,18 +103,31 @@
 		831B433721CAE1BF00B51572 /* ex04-Editor */ = {
 			isa = PBXGroup;
 			children = (
+				8350EC5D21CFCEFD004994F2 /* Toolbar */,
 				831B433821CAE1BF00B51572 /* AppDelegate.swift */,
 				834B1D9E21CAF7C8002DE0FA /* StateManager.swift */,
 				834B1D9721CAE581002DE0FA /* StoriesViewController.swift */,
-				83792D6B21CC1CDC001E01E4 /* StoriesViewToolbar.swift */,
 				834B1D9621CAE581002DE0FA /* StoriesView.xml */,
 				834B1D9821CAE581002DE0FA /* TableViewLayout.swift */,
 				834B1D9921CAE581002DE0FA /* TableViewTemplate.xml */,
+				8350EC5921CF1001004994F2 /* StoryViewController.swift */,
+				8350EC5721CF0F85004994F2 /* StoryView.xml */,
+				83D908E121D15F4B001B8F35 /* ChapterViewController.swift */,
+				83D908E321D1600B001B8F35 /* ChapterView.xml */,
 				831B433F21CAE1C000B51572 /* Assets.xcassets */,
 				831B434121CAE1C000B51572 /* LaunchScreen.storyboard */,
 				831B434421CAE1C000B51572 /* Info.plist */,
 			);
 			path = "ex04-Editor";
+			sourceTree = "<group>";
+		};
+		8350EC5D21CFCEFD004994F2 /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				83792D6B21CC1CDC001E01E4 /* StoriesViewToolbar.swift */,
+				8350EC5B21CF153B004994F2 /* EditToolbar.swift */,
+			);
+			path = Toolbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +189,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83D908E421D1600B001B8F35 /* ChapterView.xml in Resources */,
 				831B434321CAE1C000B51572 /* LaunchScreen.storyboard in Resources */,
+				8350EC5821CF0F85004994F2 /* StoryView.xml in Resources */,
 				831B434021CAE1C000B51572 /* Assets.xcassets in Resources */,
 				834B1D9A21CAE581002DE0FA /* StoriesView.xml in Resources */,
 				834B1D9D21CAE581002DE0FA /* TableViewTemplate.xml in Resources */,
@@ -180,11 +205,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8350EC5A21CF1001004994F2 /* StoryViewController.swift in Sources */,
 				834B1D9B21CAE581002DE0FA /* StoriesViewController.swift in Sources */,
 				834B1D9F21CAF7C8002DE0FA /* StateManager.swift in Sources */,
 				831B433921CAE1BF00B51572 /* AppDelegate.swift in Sources */,
+				83D908E221D15F4B001B8F35 /* ChapterViewController.swift in Sources */,
 				834B1D9C21CAE581002DE0FA /* TableViewLayout.swift in Sources */,
 				83792D6C21CC1CDC001E01E4 /* StoriesViewToolbar.swift in Sources */,
+				8350EC5C21CF153B004994F2 /* EditToolbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

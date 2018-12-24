@@ -1,0 +1,20 @@
+<UIView
+    left            ="safeAreaInsets.left"
+    right           ="safeAreaInsets.right"
+    top             ="safeAreaInsets.top"
+    bottom          ="safeAreaInsets.bottom"
+    >
+    <UITableView
+        outlet          ="storyTableView"
+        template        ="TableViewTemplate.xml"
+        height          ="parent.height - toolBarHeight_Int"
+    />
+    <EditToolbar
+        outlet          ="editToolbar"
+        top             ="previous.bottom"
+        height          ="toolBarHeight_Int"
+        width           ="100%"
+        backgroundColor ="white"
+    />
+</UIView>
+
