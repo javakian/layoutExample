@@ -107,7 +107,7 @@
 		831B433721CAE1BF00B51572 /* ex04-Editor */ = {
 			isa = PBXGroup;
 			children = (
-				83D908E921D19A4A001B8F35 /* Viewer */,
+				83D908E921D19A4A001B8F35 /* View */,
 				8350EC5D21CFCEFD004994F2 /* Toolbar */,
 				831B433821CAE1BF00B51572 /* AppDelegate.swift */,
 				834B1D9E21CAF7C8002DE0FA /* StateManager.swift */,
@@ -127,7 +127,7 @@
 			path = Toolbar;
 			sourceTree = "<group>";
 		};
-		83D908E921D19A4A001B8F35 /* Viewer */ = {
+		83D908E921D19A4A001B8F35 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				834B1D9721CAE581002DE0FA /* StoriesViewController.swift */,
@@ -141,7 +141,7 @@
 				834B1D9821CAE581002DE0FA /* TableViewLayout.swift */,
 				834B1D9921CAE581002DE0FA /* TableViewTemplate.xml */,
 			);
-			path = Viewer;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
