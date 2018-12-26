@@ -13,6 +13,7 @@
 		836B754321CD63D6005417AE /* LongTouchTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B754221CD63D6005417AE /* LongTouchTip.swift */; };
 		83792D7E21CC502C001E01E4 /* Interface.h in Headers */ = {isa = PBXBuildFile; fileRef = 83792D7C21CC502C001E01E4 /* Interface.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83792D8621CC50A2001E01E4 /* Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83792D8521CC50A2001E01E4 /* Layout.framework */; };
+		83D7AE6721D307A100C545FE /* TableViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7AE6621D307A100C545FE /* TableViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		83792D7C21CC502C001E01E4 /* Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
 		83792D7D21CC502C001E01E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83792D8521CC50A2001E01E4 /* Layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83D7AE6621D307A100C545FE /* TableViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				836B753921CC59F6005417AE /* ThirdParty */,
 				836B753421CC5139005417AE /* AVKit+Layout.swift */,
 				836B754221CD63D6005417AE /* LongTouchTip.swift */,
+				83D7AE6621D307A100C545FE /* TableViewLayout.swift */,
 				83792D7C21CC502C001E01E4 /* Interface.h */,
 				83792D7D21CC502C001E01E4 /* Info.plist */,
 			);
@@ -166,6 +169,7 @@
 				836B753C21CC5AE6005417AE /* EasyTipView.swift in Sources */,
 				836B754321CD63D6005417AE /* LongTouchTip.swift in Sources */,
 				836B753521CC5139005417AE /* AVKit+Layout.swift in Sources */,
+				83D7AE6721D307A100C545FE /* TableViewLayout.swift in Sources */,
 				836B753E21CC5B84005417AE /* EasyTipView-UIKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,7 +16,6 @@
 		831B434321CAE1C000B51572 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831B434121CAE1C000B51572 /* LaunchScreen.storyboard */; };
 		834B1D9A21CAE581002DE0FA /* StoriesView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 834B1D9621CAE581002DE0FA /* StoriesView.xml */; };
 		834B1D9B21CAE581002DE0FA /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B1D9721CAE581002DE0FA /* StoriesViewController.swift */; };
-		834B1D9C21CAE581002DE0FA /* TableViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B1D9821CAE581002DE0FA /* TableViewLayout.swift */; };
 		834B1D9D21CAE581002DE0FA /* TableViewTemplate.xml in Resources */ = {isa = PBXBuildFile; fileRef = 834B1D9921CAE581002DE0FA /* TableViewTemplate.xml */; };
 		834B1D9F21CAF7C8002DE0FA /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B1D9E21CAF7C8002DE0FA /* StateManager.swift */; };
 		8350EC5821CF0F85004994F2 /* StoryView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8350EC5721CF0F85004994F2 /* StoryView.xml */; };
@@ -58,7 +57,6 @@
 		831B434421CAE1C000B51572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		834B1D9621CAE581002DE0FA /* StoriesView.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = StoriesView.xml; sourceTree = "<group>"; };
 		834B1D9721CAE581002DE0FA /* StoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
-		834B1D9821CAE581002DE0FA /* TableViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewLayout.swift; sourceTree = "<group>"; };
 		834B1D9921CAE581002DE0FA /* TableViewTemplate.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TableViewTemplate.xml; sourceTree = "<group>"; };
 		834B1D9E21CAF7C8002DE0FA /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
 		8350EC5721CF0F85004994F2 /* StoryView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StoryView.xml; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				83D908E321D1600B001B8F35 /* ChapterView.xml */,
 				83D908E521D17188001B8F35 /* PlayViewController.swift */,
 				83D908E721D18663001B8F35 /* PlayView.xml */,
-				834B1D9821CAE581002DE0FA /* TableViewLayout.swift */,
 				834B1D9921CAE581002DE0FA /* TableViewTemplate.xml */,
 			);
 			path = View;
@@ -238,7 +235,6 @@
 				834B1D9F21CAF7C8002DE0FA /* StateManager.swift in Sources */,
 				831B433921CAE1BF00B51572 /* AppDelegate.swift in Sources */,
 				83D908E221D15F4B001B8F35 /* ChapterViewController.swift in Sources */,
-				834B1D9C21CAE581002DE0FA /* TableViewLayout.swift in Sources */,
 				83792D6C21CC1CDC001E01E4 /* StoriesViewToolbar.swift in Sources */,
 				8350EC5C21CF153B004994F2 /* EditToolbar.swift in Sources */,
 			);

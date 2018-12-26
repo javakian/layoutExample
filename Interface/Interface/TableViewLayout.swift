@@ -1,17 +1,17 @@
 //  TableViewLayout.swift
-//  ex04-Viewer
+//  Interface
 //
 //  Created by CHH51 on 12/19/18.
 
 import UIKit
 import Layout
 
-internal protocol TableViewLayout {
+public protocol TableViewLayout {
     
 }
 
 extension TableViewLayout {
-    internal func rowHeightFactor( view: UIView ) -> Double {
+    public func rowHeightFactor( view: UIView ) -> Double {
         switch view.traitCollection.preferredContentSizeCategory {
         case UIContentSizeCategory.accessibilityExtraExtraExtraLarge:
             return 2.8
