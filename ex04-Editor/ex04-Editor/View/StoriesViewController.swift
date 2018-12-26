@@ -6,6 +6,7 @@
 import UIKit
 import Layout
 import Model
+import Interface
 
 final class StoriesViewController: UIViewController, LayoutLoading,
                                    UITableViewDataSource, UITableViewDelegate, TableViewLayout {
