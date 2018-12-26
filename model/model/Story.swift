@@ -17,6 +17,12 @@ public final class Story: UniqueId {
         self.summaryId      = summaryId
         self.aChapterId     = aChapterId
         super.init(uId: id )
+        let index = ContentIndex.singleton
+        index.update(item: ContentItem(itemId: self.uniqueId, type: .story ) )
+        for childId in self.aChapterId {
+            index.update(item: ContentItem(parentId: self.uniqueId, itemId: childId, contentType: .chapter ))
+        }
+        index.update(item: ContentItem(parentId: self.uniqueId, itemId: self.summaryId ))
     }
     public  func    storyImage() -> UIImage {
         for chapterId in aChapterId {

@@ -15,6 +15,7 @@ public final class Image: UniqueId {
         self.resourceName   =   rName
         self.caption        =   caption
         super.init(uId: id )
+        ContentIndex.singleton.update(item: ContentItem(itemId: self.uniqueId, type: .image ))
     }
     
     public func loadUIImage() -> UIImage {

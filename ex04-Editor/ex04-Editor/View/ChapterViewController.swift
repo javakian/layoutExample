@@ -36,21 +36,21 @@ final class ChapterViewController: UIViewController, LayoutLoading, EditToolbarD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let assetId     = self.chapter!.aUniqueId[ indexPath.row ]
+        let contentIdx  = ContentIndex.singleton.getBy(itemId: assetId )!
         var node: LayoutNode? = nil
-        repeat {
-            if let imageAsset = Image.getById( assetId ) {
-                node = self._imageAssetNodeCell(imageAsset, collectionView: collectionView, indexPath: indexPath )
-                break
-            }
-            if let movieAsset = Movie.getById( assetId ) {
-                node = self._movieAssetNodeCell(movieAsset, collectionView: collectionView, indexPath: indexPath )
-                break
-            }
-            if let textAsset = Text.getById( assetId ) {
-                node = self._textAssetNodeCell(textAsset, collectionView: collectionView, indexPath: indexPath )
-                break
-            }
-        } while( false )
+        switch contentIdx.itemContentType {
+        case .image:
+            let imageAsset = Image.getById( assetId )!
+            node = self._imageAssetNodeCell(imageAsset, collectionView: collectionView, indexPath: indexPath )
+        case .movie:
+            let movieAsset = Movie.getById( assetId )!
+            node = self._movieAssetNodeCell(movieAsset, collectionView: collectionView, indexPath: indexPath )
+        case .text:
+            let textAsset = Text.getById( assetId )!
+            node = self._textAssetNodeCell(textAsset, collectionView: collectionView, indexPath: indexPath )
+        default:
+            preconditionFailure("unexpected ContentIndex: \(contentIdx)")
+        }
         return node!.view as! UICollectionViewCell
     }
     // MARK: UICollectionViewDelegate

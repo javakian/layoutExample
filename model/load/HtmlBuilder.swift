@@ -1,8 +1,7 @@
 //  HtmlBuilder.swift
 //  Model
 //
-//  Created by Chris Hawkins (developer) on 12/7/18.
-//  Copyright © 2018 Chris Hawkins (developer). All rights reserved.
+//  Created by CHH51 on 12/7/18.
 
 import Foundation
 

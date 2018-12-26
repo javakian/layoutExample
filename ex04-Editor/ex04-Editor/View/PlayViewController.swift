@@ -86,18 +86,18 @@ final class PlayViewController: UIViewController, LayoutLoading, EditToolbarDele
     }
     private func _showCurrentAsset() -> Void {
         let assetId = self.aAssetId[ self.curAssetIndex ]
-        if let imageAsset = Image.getById( assetId ) {
-            self._showImageAsset( imageAsset )
-            return
+        let contentIdx = ContentIndex.singleton.getBy(itemId: assetId )!
+        switch contentIdx.itemContentType {
+        case .image:
+            self._showImageAsset( Image.getById( contentIdx.itemUniqueId)! )
+        case .movie:
+            self._showMovieAsset( Movie.getById( contentIdx.itemUniqueId)! )
+        case .text:
+            self._showTextAsset(  Text.getById( contentIdx.itemUniqueId )! )
+        default:
+            preconditionFailure("invalid ContentIndex: \(contentIdx)")
         }
-        if let movieAsset = Movie.getById( assetId ) {
-            self._showMovieAsset( movieAsset )
-            return
-        }
-        if let textAsset = Text.getById( assetId ) {
-            self._showTextAsset( textAsset )
-        }
-    }
+     }
     private func _showImageAsset( _ imageAsset: Image ) -> Void {
         self._setVisibleView( imageView! )
         captionView?.text = imageAsset.caption

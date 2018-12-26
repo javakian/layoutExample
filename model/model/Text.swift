@@ -95,6 +95,7 @@ public final class Text: UniqueId, BuildsHtml {
                  aPara aPara_:   [Para] ) {
         self.aPara  = aPara_
         super.init(uId: id )
+        ContentIndex.singleton.update(item: ContentItem(itemId: self.uniqueId, type: .text ))
     }
     public func addToBuilder(_ builder_: HtmlBuilder) {
         for para in self.aPara {
