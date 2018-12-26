@@ -28,10 +28,10 @@ public final class Movie: UniqueId {
     public  static func getById( _ id_: Int ) -> Movie? {
         return globalDictionaryById[ id_ ]
     }
-    public  static func addMovie( _ movie_: Movie ) {
+    internal static func addMovie( _ movie_: Movie ) {
         globalDictionaryById[ movie_.uniqueId ] = movie_
     }
-    public  static func removeById( _ id_: Int ) {
+    internal static func removeById( _ id_: Int ) {
         globalDictionaryById[ id_ ] = nil
     }
 }

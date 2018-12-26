@@ -16,9 +16,9 @@ final class PlayViewController: UIViewController, LayoutLoading, EditToolbarDele
     @IBOutlet       var     textView:       UILabel?
     @IBOutlet       var     captionView:    UILabel?
     @IBOutlet       var     avController:   AVPlayerViewController?
-    internal        var     aAssetId:       [Int]  = [Int]()
-                    var     curAssetIndex:  Int    = 0
-                    var     curTimer:       Timer?
+    internal        var     aAssetId:       [Int]        = [Int]()
+    private         var     _curAssetIndex: Int          = 0
+    private         var     _curTimer:      Timer?       = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,7 +85,10 @@ final class PlayViewController: UIViewController, LayoutLoading, EditToolbarDele
         }
     }
     private func _showCurrentAsset() -> Void {
-        let assetId = self.aAssetId[ self.curAssetIndex ]
+        if ( self.aAssetId.count < 1 ) {
+            return 
+        }
+        let assetId = self.aAssetId[ self._curAssetIndex ]
         let contentIdx = ContentIndex.singleton.getBy(itemId: assetId )!
         switch contentIdx.itemContentType {
         case .image:
@@ -132,26 +135,26 @@ final class PlayViewController: UIViewController, LayoutLoading, EditToolbarDele
         self._launchTimer(seconds: 6.0 )
     }
     private func _launchTimer( seconds: TimeInterval ) -> Void {
-        if ( self.curTimer?.isValid == true ) {
-            self.curTimer?.invalidate()
-            self.curTimer = nil
+        if ( self._curTimer?.isValid == true ) {
+            self._curTimer?.invalidate()
+            self._curTimer = nil
         }
-        self.curTimer = Timer(timeInterval: seconds,
+        self._curTimer = Timer(timeInterval: seconds,
                               target: self, selector: #selector(fireTimer(timer:)),
                               userInfo: nil, repeats: false )
-        RunLoop.current.add(self.curTimer!, forMode: .common )
+        RunLoop.current.add(self._curTimer!, forMode: .common )
     }
     private func _showNextAssetIfAvailable() {
-        if ( self.curAssetIndex + 1 < self.aAssetId.count ) {
-            self.curAssetIndex += 1
+        if ( self._curAssetIndex + 1 < self.aAssetId.count ) {
+            self._curAssetIndex += 1
             DispatchQueue.main.async {
                 self._showCurrentAsset()
             }
         }
     }
     @objc private func fireTimer( timer: Timer ) -> Void {
-        self.curTimer?.invalidate()
-        self.curTimer = nil
+        self._curTimer?.invalidate()
+        self._curTimer = nil
         self._showNextAssetIfAvailable()
     }
     @objc private func _movieFinished() {
@@ -164,20 +167,25 @@ final class PlayViewController: UIViewController, LayoutLoading, EditToolbarDele
     func addAction(toolbar: UIToolbar) {
         preconditionFailure("invalid - add")
     }
-    
     func deleteAction(toolbar: UIToolbar) {
-        print("delete")
+        precondition( self.aAssetId.count == 1 )
+        let deleteAlert = DeleteAlert(parent: self, deleteId: self.aAssetId[0] )
+        deleteAlert.present( self._deleteActionHandler(_:_:) )
     }
-    
     func editAction(toolbar: UIToolbar) {
         print("edit")
     }
-    
     func reorderAction(toolbar: UIToolbar) {
         preconditionFailure("invalid - reorder")
     }
-    
     func moveAction(toolbar: UIToolbar) {
         print("move")
+    }
+    // MARK: toolbar action handlers
+    private func _deleteActionHandler(_ deleted: Bool, _ uniqueId: Int ) -> Void {
+        if ( deleted ) {
+            ContentManager.deleteBy(itemId: uniqueId )
+            self.navigationController?.popViewController(animated: true )
+        }
     }
 }

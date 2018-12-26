@@ -24,14 +24,13 @@ public final class Story: UniqueId {
         }
         index.update(item: ContentItem(parentId: self.uniqueId, itemId: self.summaryId ))
     }
-    public  func    storyImage() -> UIImage {
+    public  func    storyImage() -> UIImage? {
         for chapterId in aChapterId {
             if let chapter = Chapter.getById( chapterId ) {
                 return chapter.chapterImage()
             }
         }
-        let imageAsset = Image.getById( eUId.phMOR_Bear.rawValue )!
-        return imageAsset.loadUIImage()
+        return nil 
     }
     public  func   allContentId() -> [Int] {
         var aId = [Int]()
@@ -50,7 +49,7 @@ public final class Story: UniqueId {
     public  static func addStory( _ story_: Story ) {
         globalDictionaryById[ story_.uniqueId ] = story_
     }
-    public  static func removeById( _ id_: Int ) {
+    internal static func removeById( _ id_: Int ) {
         globalDictionaryById[ id_ ] = nil
     }
     public  static func storyIds() -> [Int] {

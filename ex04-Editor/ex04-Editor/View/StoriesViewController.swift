@@ -19,13 +19,18 @@ final class StoriesViewController: UIViewController, LayoutLoading,
     override func viewDidLoad() {
         super.viewDidLoad()
         storyIds = Story.storyIds()
-        
+
         loadLayout(named:     "StoriesView.xml",
                    state:     StateManager.singleton.globalState, 
                    constants: StateManager.singleton.globalLayoutConstants )
         self.navigationItem.title = "Stories"
+        NotificationCenter.default.addObserver(forName: Notification.Name.Model_ContentManager_Change,
+                                               object: nil, queue: nil ) {[weak self] _ in
+                                                self?.storiesTableView?.reloadData()}
     }
-
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 
     // MARK: UITableViewDataSource
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

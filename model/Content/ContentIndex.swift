@@ -15,9 +15,9 @@ public enum eContentType: String {
 }
 
 public final class ContentItem {
-    fileprivate(set) public var     parentUniqueId:     Int?
-                     public let     itemUniqueId:       Int
-    fileprivate(set) public var     itemContentType:    eContentType
+    private(set) public var     parentUniqueId:     Int?
+                 public let     itemUniqueId:       Int
+    private(set) public var     itemContentType:    eContentType
     
     public init( parentId:      Int,
                  itemId:        Int,
@@ -36,7 +36,7 @@ public final class ContentItem {
         self.itemUniqueId       = itemId
         self.itemContentType    = type
     }
-    public func set( parentId: Int ) {
+    public func set( parentId: Int? ) {
         self.parentUniqueId     = parentId
     }
     public func set( contentType: eContentType ) {
@@ -51,16 +51,16 @@ public final class ContentIndex {
     public  func    getBy( itemId: Int ) -> ContentItem? {
         return _dictItemId[ itemId ]
     }
-    internal func   remove( itemId: Int ) {
+    public func     remove( itemId: Int ) {
         _dictItemId[ itemId ] = nil
     }
     internal func    update( item: ContentItem ) {
         if let existing = _dictItemId[ item.itemUniqueId ] {
             if ( item.parentUniqueId != nil ) {
-                existing.parentUniqueId = item.parentUniqueId
+                existing.set(parentId: item.parentUniqueId )
             }
             if ( item.itemContentType != .unknown ) {
-                existing.itemContentType = item.itemContentType
+                existing.set(contentType: item.itemContentType )
             }
         } else {
             _dictItemId[ item.itemUniqueId ] = item

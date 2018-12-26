@@ -31,10 +31,10 @@ public final class Image: UniqueId {
     public  static func getById( _ id_: Int ) -> Image? {
         return globalDictionaryById[ id_ ]
     }
-    public  static func addImage( _ image_: Image ) {
+    internal static func addImage( _ image_: Image ) {
         globalDictionaryById[ image_.uniqueId ] = image_
     }
-    public  static func removeById( _ id_: Int ) {
+    internal static func removeById( _ id_: Int ) {
         globalDictionaryById[ id_ ] = nil 
     }
 }

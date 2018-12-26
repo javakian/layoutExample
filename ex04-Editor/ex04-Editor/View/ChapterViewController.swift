@@ -13,7 +13,7 @@ final class ChapterViewController: UIViewController, LayoutLoading, EditToolbarD
                                    UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet   var chapterCollectionView:  UICollectionView?
     @IBOutlet   var editToolbar:            EditToolbar?
-                var chapter:                Chapter? = nil
+                var chapter:                Chapter?               = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +22,19 @@ final class ChapterViewController: UIViewController, LayoutLoading, EditToolbarD
                    constants: StateManager.singleton.globalLayoutConstants )
         self.navigationItem.title = self.chapter!.title
         if ( !StateManager.singleton.getStateBool( .isEditMode_Bool )) {
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play,
-                                                                     target: self,
-                                                                     action: #selector(_playButtonPress(sender:)))
+            if ( self.chapter!.aUniqueId.count > 0 ) {
+                self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play,
+                                                                         target: self,
+                                                                         action: #selector(_playButtonPress(sender:)))
+            }
         }
         self.editToolbar?.toolbarSetup(controller: self, delegate: self )
+        NotificationCenter.default.addObserver(forName: Notification.Name.Model_ContentManager_Change,
+                                               object: nil, queue: nil ) {[weak self] _ in
+                                                self?.chapterCollectionView?.reloadData() }
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: UICollectionViewDataSource

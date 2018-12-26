@@ -20,14 +20,13 @@ public final class Chapter: UniqueId {
             index.update(item: ContentItem(parentId: self.uniqueId, itemId: childId ))
         }
     }
-    public  func    chapterImage() -> UIImage {
+    public  func    chapterImage() -> UIImage? {
         for assetId in self.aUniqueId {
             if let assetImage = Image.getById( assetId ) {
                 return assetImage.loadUIImage()
             }
         }
-        let imageAsset = Image.getById( eUId.phMOR_Bear.rawValue )!
-        return imageAsset.loadUIImage()
+        return nil
     }
 
     // MARK: static
@@ -35,10 +34,10 @@ public final class Chapter: UniqueId {
     public  static func getById( _ id_: Int ) -> Chapter? {
         return globalDictionaryById[ id_ ]
     }
-    public  static func addChapter( _ chapter_: Chapter ) {
+    internal static func addChapter( _ chapter_: Chapter ) {
         globalDictionaryById[ chapter_.uniqueId ] = chapter_
     }
-    public  static func removeById( _ id_: Int ) {
+    internal static func removeById( _ id_: Int ) {
         globalDictionaryById[ id_ ] = nil
     }
 }

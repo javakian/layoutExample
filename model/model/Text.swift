@@ -110,7 +110,7 @@ public final class Text: UniqueId, BuildsHtml {
     public  static func addText( _ text_: Text ) {
         globalDictionaryById[ text_.uniqueId ] = text_
     }
-    public  static func removeById( _ id_: Int ) {
+    internal static func removeById( _ id_: Int ) {
         globalDictionaryById[ id_ ] = nil
     }
 }

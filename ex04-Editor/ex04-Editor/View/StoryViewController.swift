@@ -16,7 +16,7 @@ final class StoryViewController: UIViewController, LayoutLoading, EditToolbarDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         loadLayout(named:     "StoryView.xml",
                    state:     StateManager.singleton.globalState,
                    constants: StateManager.singleton.globalLayoutConstants )
@@ -28,6 +28,12 @@ final class StoryViewController: UIViewController, LayoutLoading, EditToolbarDel
         }
         self.editToolbar?.toolbarSetup(controller: self, delegate: self )
         self._updateToolbar()
+        NotificationCenter.default.addObserver(forName: Notification.Name.Model_ContentManager_Change,
+                                               object: nil, queue: nil ) {[weak self] _ in
+                                                self?.storyTableView?.reloadData()}
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: UITableViewDataSource
