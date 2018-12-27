@@ -13,7 +13,9 @@ extension ChapterViewController: EditToolbarDelegate {
     }
     
     func deleteAction(toolbar: UIToolbar) {
-        print("delete")
+        precondition( self.chapter != nil )
+        let deleteAlert = DeleteAlert(parent: self, deleteId: self.chapter!.uniqueId )
+        deleteAlert.present( self._deleteActionHandler(_:_:) )
     }
     
     func editAction(toolbar: UIToolbar) {
@@ -26,5 +28,12 @@ extension ChapterViewController: EditToolbarDelegate {
     
     func moveAction(toolbar: UIToolbar) {
         print("move")
+    }
+    // MARK: toolbar action handlers
+    private func _deleteActionHandler(_ deleted: Bool, _ uniqueId: Int ) -> Void {
+        if ( deleted ) {
+            ContentManager.deleteBy(itemId: uniqueId )
+            self.navigationController?.popViewController(animated: true )
+        }
     }
 }

@@ -26,6 +26,7 @@ final class StoriesViewController: UIViewController, LayoutLoading,
         self.navigationItem.title = "Stories"
         NotificationCenter.default.addObserver(forName: Notification.Name.Model_ContentManager_Change,
                                                object: nil, queue: nil ) {[weak self] _ in
+                                                self?.storyIds = Story.storyIds() 
                                                 self?.storiesTableView?.reloadData()}
     }
     deinit {

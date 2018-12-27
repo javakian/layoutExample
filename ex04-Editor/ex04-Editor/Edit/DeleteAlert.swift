@@ -25,9 +25,15 @@ public final class DeleteAlert {
         precondition(self._alertController == nil, "Alert is already active")
         self._selfRetain = self
         self._completionHandler  = completionHandler_
-        self._alertController = UIAlertController(title: "Delete", message: "It will be gone", preferredStyle: .actionSheet)
-        self._alertController!.addAction( UIAlertAction(title: "Delete", style: .destructive ) {[weak self] _ in self?._handleDeleteAction() } )
-        self._alertController!.addAction( UIAlertAction(title: "Cancel", style: .cancel      ) {[weak self] _ in self?._handleCancelAction() } )
+        let title   = "Delete \(self.contentItem.itemContentType.rawValue) ?"
+        let summary = ContentSummary.init(assetId: self.deleteUniqueId )
+        let message = "\(summary.countImage) 🌃 \(summary.countMovie) 📽 \(summary.countText) 📖"
+        self._alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        self._alertController!.addAction( UIAlertAction(title: "Delete", style: .destructive ) {
+            [weak self] _ in self?._handleDeleteAction() } )
+        self._alertController!.addAction( UIAlertAction(title: "Cancel", style: .cancel      ) {
+            [weak self] _ in self?._handleCancelAction() } )
+        self._alertController!.preferredAction = self._alertController!.actions[1]
         self.parentController.present(self._alertController!, animated: true, completion: nil )
     }
     // MARK: private

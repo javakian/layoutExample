@@ -35,7 +35,9 @@ public final class ContentManager {
         if let contentIndex = ContentIndex.singleton.getBy(itemId: itemId ) {
             switch contentIndex.itemContentType {
             case .chapter:
-                preconditionFailure("not implemented")
+                if let chapter = Chapter.getById( itemId ) {
+                    self.deleteChapter( chapter )
+                }
             case .image:
                 if let image = Image.getById( itemId ) {
                     self.deleteImage( image )
@@ -45,7 +47,9 @@ public final class ContentManager {
                     self.deleteMovie( movie )
                 }
             case .story:
-                preconditionFailure("not implemented")
+                if let story = Story.getById( itemId ) {
+                    self.deleteStory( story )
+                }
             case .text:
                 if let text = Text.getById( itemId ) {
                     self.deleteText( text )
@@ -55,18 +59,33 @@ public final class ContentManager {
             }
         }
     }
+    public static func deleteChapter( _ chapter_: Chapter ) {
+        self._removeParentReference(uniqueId_: chapter_.uniqueId )
+        ContentIndex.singleton.remove(itemId: chapter_.uniqueId )
+        Chapter.removeById( chapter_.uniqueId )
+        self._notifyDelete()
+    }
     public static func deleteImage( _ image_: Image ) {
         self._removeParentReference(uniqueId_: image_.uniqueId )
+        ContentIndex.singleton.remove(itemId: image_.uniqueId )
         Image.removeById( image_.uniqueId )
         self._notifyDelete()
     }
     public static func deleteMovie( _ movie_: Movie ) {
         self._removeParentReference(uniqueId_: movie_.uniqueId )
+        ContentIndex.singleton.remove(itemId: movie_.uniqueId )
         Movie.removeById( movie_.uniqueId )
+        self._notifyDelete()
+    }
+    public static func deleteStory( _ story_: Story ) {
+        self._removeParentReference(uniqueId_: story_.uniqueId )
+        ContentIndex.singleton.remove(itemId: story_.uniqueId )
+        Story.removeById( story_.uniqueId )
         self._notifyDelete()
     }
     public static func deleteText( _ text_: Text ) {
         self._removeParentReference(uniqueId_: text_.uniqueId )
+        ContentIndex.singleton.remove(itemId: text_.uniqueId )
         Text.removeById( text_.uniqueId )
         self._notifyDelete()
     }

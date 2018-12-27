@@ -17,22 +17,11 @@ public final class ContentSummary {
     }
     public init( chapterId: Int ) {
         self.nodeId    =   chapterId
-        if let chapter = Chapter.getById( chapterId ) {
-            for contentId in chapter.aUniqueId {
-                self._evaluateAssetId( contentId )
-              }
-        }
+        self._evaluateChapterId( chapterId )
     }
     public init( storyId: Int ) {
         self.nodeId = storyId
-        if let story = Story.getById( storyId ) {
-            let summaryTotal = ContentSummary(assetId: story.summaryId )
-            self._addSummary( summaryTotal )
-            for chapterId in story.aChapterId {
-                let chapterTotal = ContentSummary(chapterId: chapterId )
-                self._addSummary( chapterTotal )
-            }
-        }
+        self._evaluateStoryId( storyId )
     }
     private func _addSummary( _ summary: ContentSummary ) {
         self.countImage += summary.countImage
@@ -40,17 +29,38 @@ public final class ContentSummary {
         self.countText  += summary.countText
     }
     private func _evaluateAssetId( _ assetId: Int ) {
-        if Image.getById( assetId ) != nil {
-            self.countImage += 1
-            return
+        if let contentIndex = ContentIndex.singleton.getBy(itemId: assetId) {
+            switch contentIndex.itemContentType {
+            case .chapter:
+                self._evaluateChapterId( assetId )
+            case .image:
+                self.countImage += 1
+            case .movie:
+                self.countMovie += 1
+            case .story:
+                self._evaluateStoryId( assetId )
+            case .text:
+                self.countText += 1
+            case .unknown:
+                preconditionFailure("unexpected")
+            }
         }
-        if Movie.getById( assetId ) != nil {
-            self.countMovie += 1
-            return
+     }
+    private func _evaluateChapterId( _ chapterId: Int ) {
+        if let chapter = Chapter.getById( chapterId ) {
+            for contentId in chapter.aUniqueId {
+                self._evaluateAssetId( contentId )
+            }
         }
-        if Text.getById( assetId ) != nil {
-            self.countText += 1
-            return
+    }
+    private func _evaluateStoryId( _ storyId: Int ) {
+        if let story = Story.getById( storyId ) {
+            let summaryTotal = ContentSummary(assetId: story.summaryId )
+            self._addSummary( summaryTotal )
+            for chapterId in story.aChapterId {
+                let chapterTotal = ContentSummary(chapterId: chapterId )
+                self._addSummary( chapterTotal )
+            }
         }
     }
 }
