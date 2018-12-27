@@ -9,7 +9,7 @@ import AVKit
 import Layout
 import Model
 
-final class PlayViewController: UIViewController, LayoutLoading, EditToolbarDelegate {
+final class PlayViewController: UIViewController, LayoutLoading {
     @IBOutlet       var     editToolbar:    EditToolbar? 
     @IBOutlet       var     imageView:      UIImageView?
     @IBOutlet       var     movieView:      UIView?
@@ -28,11 +28,7 @@ final class PlayViewController: UIViewController, LayoutLoading, EditToolbarDele
                    state:    mergedState,
                    constants: StateManager.singleton.globalLayoutConstants,
                                ["labelHeight" : 44 ])
-        if let toolbar = self.editToolbar {
-            toolbar.toolbarSetup(controller: self, delegate: self )
-            toolbar.items = [toolbar.barItemDelete, toolbar.barItemSpace, toolbar.barItemEdit,
-                             toolbar.barItemSpace, toolbar.barItemMove]
-        }
+        self._viewDidLoadEdit()
         self._showCurrentAsset()
     }
     // MARK: private - visible view
@@ -162,30 +158,5 @@ final class PlayViewController: UIViewController, LayoutLoading, EditToolbarDele
                                                   name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
                                                   object: nil )
         self._showNextAssetIfAvailable()
-    }
-    // MARK: EditToolbarDelegate
-    func addAction(toolbar: UIToolbar) {
-        preconditionFailure("invalid - add")
-    }
-    func deleteAction(toolbar: UIToolbar) {
-        precondition( self.aAssetId.count == 1 )
-        let deleteAlert = DeleteAlert(parent: self, deleteId: self.aAssetId[0] )
-        deleteAlert.present( self._deleteActionHandler(_:_:) )
-    }
-    func editAction(toolbar: UIToolbar) {
-        print("edit")
-    }
-    func reorderAction(toolbar: UIToolbar) {
-        preconditionFailure("invalid - reorder")
-    }
-    func moveAction(toolbar: UIToolbar) {
-        print("move")
-    }
-    // MARK: toolbar action handlers
-    private func _deleteActionHandler(_ deleted: Bool, _ uniqueId: Int ) -> Void {
-        if ( deleted ) {
-            ContentManager.deleteBy(itemId: uniqueId )
-            self.navigationController?.popViewController(animated: true )
-        }
     }
 }

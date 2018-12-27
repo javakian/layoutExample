@@ -8,7 +8,7 @@ import Layout
 import Model
 import Interface
 
-final class StoryViewController: UIViewController, LayoutLoading, EditToolbarDelegate,
+final class StoryViewController: UIViewController, LayoutLoading,
                                  UITableViewDataSource, UITableViewDelegate, TableViewLayout {
     @IBOutlet   var storyTableView: UITableView?
     @IBOutlet   var editToolbar:    EditToolbar?
@@ -26,8 +26,7 @@ final class StoryViewController: UIViewController, LayoutLoading, EditToolbarDel
                                                                      target: self,
                                                                      action: #selector(_playButtonPress(sender:)))
         }
-        self.editToolbar?.toolbarSetup(controller: self, delegate: self )
-        self._updateToolbar()
+        self._viewDidLoadEdit()
         NotificationCenter.default.addObserver(forName: Notification.Name.Model_ContentManager_Change,
                                                object: nil, queue: nil ) {[weak self] _ in
                                                 self?.storyTableView?.reloadData()}
@@ -53,7 +52,7 @@ final class StoryViewController: UIViewController, LayoutLoading, EditToolbarDel
         node.setState([
             "rowTitle":  title,
             "rowDetail": detail,
-            "image":     image,
+            "image":     image as Any,
             "hideImage": isLarge
             ])
         return node.view as! UITableViewCell
@@ -70,34 +69,11 @@ final class StoryViewController: UIViewController, LayoutLoading, EditToolbarDel
         let factor = CGFloat( self.rowHeightFactor(view: tableView ) )
         return tableView.estimatedRowHeight * factor
     }
-    // MARK: EditToolbarDelegate
-    func addAction(toolbar: UIToolbar) {
-        print("add")
-    }
-    
-    func deleteAction(toolbar: UIToolbar) {
-        print("delete")
-    }
-    
-    func editAction(toolbar: UIToolbar) {
-        print("edit")
-    }
-    
-    func reorderAction(toolbar: UIToolbar) {
-        print("reorder")
-    }
-    
-    func moveAction(toolbar: UIToolbar) {
-        print("move")
-    }
     
     // MARK: private
     @objc private func  _playButtonPress( sender: UIBarButtonItem ) {
         let playVC   = PlayViewController()
         playVC.aAssetId = self.story!.allContentId()
         self.navigationController?.pushViewController( playVC, animated: true )
-    }
-    private func        _updateToolbar() {
-        self.editToolbar?.barItemReorder.isEnabled = ( self.story?.aChapterId.count ?? 0 ) > 1
     }
 }

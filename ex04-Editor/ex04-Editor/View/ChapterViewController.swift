@@ -9,7 +9,7 @@ import AVKit
 import Layout
 import Model
 
-final class ChapterViewController: UIViewController, LayoutLoading, EditToolbarDelegate,
+final class ChapterViewController: UIViewController, LayoutLoading,
                                    UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet   var chapterCollectionView:  UICollectionView?
     @IBOutlet   var editToolbar:            EditToolbar?
@@ -65,26 +65,6 @@ final class ChapterViewController: UIViewController, LayoutLoading, EditToolbarD
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let assetId     = self.chapter!.aUniqueId[ indexPath.row ]
         self._showPlayView(assetIds: [ assetId ])
-    }
-    // MARK: EditToolbarDelegate
-    func addAction(toolbar: UIToolbar) {
-        print("add")
-    }
-    
-    func deleteAction(toolbar: UIToolbar) {
-        print("delete")
-    }
-    
-    func editAction(toolbar: UIToolbar) {
-        print("edit")
-    }
-    
-    func reorderAction(toolbar: UIToolbar) {
-        print("reorder")
-    }
-    
-    func moveAction(toolbar: UIToolbar) {
-        print("move")
     }
     // MARK: private
     private func _imageAssetNodeCell( _ imageAsset:   Image,

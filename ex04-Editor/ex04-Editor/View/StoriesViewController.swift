@@ -49,7 +49,7 @@ final class StoriesViewController: UIViewController, LayoutLoading,
         node.setState([
             "rowTitle":   title,
             "rowDetail":  detail,
-            "image":      image,
+            "image":      image as Any,
             "hideImage":  isLarge
              ])
         return node.view as! UITableViewCell

@@ -24,6 +24,9 @@
 		836B754021CC5FB2005417AE /* Interface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836B753F21CC5FB2005417AE /* Interface.framework */; };
 		836B754121CC5FB2005417AE /* Interface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 836B753F21CC5FB2005417AE /* Interface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		83792D6C21CC1CDC001E01E4 /* StoriesViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83792D6B21CC1CDC001E01E4 /* StoriesViewToolbar.swift */; };
+		83B6D65E21D5438900D36207 /* PlayViewController-Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B6D65D21D5438900D36207 /* PlayViewController-Edit.swift */; };
+		83B6D66021D546B800D36207 /* ChapterViewController-Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B6D65F21D546B800D36207 /* ChapterViewController-Edit.swift */; };
+		83B6D66221D547BA00D36207 /* StoryViewController-Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B6D66121D547BA00D36207 /* StoryViewController-Edit.swift */; };
 		83D7AE6321D29EC200C545FE /* DeleteAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7AE6221D29EC200C545FE /* DeleteAlert.swift */; };
 		83D908E221D15F4B001B8F35 /* ChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D908E121D15F4B001B8F35 /* ChapterViewController.swift */; };
 		83D908E421D1600B001B8F35 /* ChapterView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 83D908E321D1600B001B8F35 /* ChapterView.xml */; };
@@ -64,6 +67,9 @@
 		8350EC5B21CF153B004994F2 /* EditToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditToolbar.swift; sourceTree = "<group>"; };
 		836B753F21CC5FB2005417AE /* Interface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Interface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83792D6B21CC1CDC001E01E4 /* StoriesViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewToolbar.swift; sourceTree = "<group>"; };
+		83B6D65D21D5438900D36207 /* PlayViewController-Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayViewController-Edit.swift"; sourceTree = "<group>"; };
+		83B6D65F21D546B800D36207 /* ChapterViewController-Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterViewController-Edit.swift"; sourceTree = "<group>"; };
+		83B6D66121D547BA00D36207 /* StoryViewController-Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryViewController-Edit.swift"; sourceTree = "<group>"; };
 		83D7AE6221D29EC200C545FE /* DeleteAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlert.swift; sourceTree = "<group>"; };
 		83D908E121D15F4B001B8F35 /* ChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterViewController.swift; sourceTree = "<group>"; };
 		83D908E321D1600B001B8F35 /* ChapterView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ChapterView.xml; sourceTree = "<group>"; };
@@ -132,6 +138,9 @@
 			isa = PBXGroup;
 			children = (
 				83D7AE6221D29EC200C545FE /* DeleteAlert.swift */,
+				83B6D66121D547BA00D36207 /* StoryViewController-Edit.swift */,
+				83B6D65F21D546B800D36207 /* ChapterViewController-Edit.swift */,
+				83B6D65D21D5438900D36207 /* PlayViewController-Edit.swift */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -228,15 +237,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B6D66221D547BA00D36207 /* StoryViewController-Edit.swift in Sources */,
 				8350EC5A21CF1001004994F2 /* StoryViewController.swift in Sources */,
 				83D908E621D17188001B8F35 /* PlayViewController.swift in Sources */,
 				834B1D9B21CAE581002DE0FA /* StoriesViewController.swift in Sources */,
 				83D7AE6321D29EC200C545FE /* DeleteAlert.swift in Sources */,
 				834B1D9F21CAF7C8002DE0FA /* StateManager.swift in Sources */,
 				831B433921CAE1BF00B51572 /* AppDelegate.swift in Sources */,
+				83B6D65E21D5438900D36207 /* PlayViewController-Edit.swift in Sources */,
 				83D908E221D15F4B001B8F35 /* ChapterViewController.swift in Sources */,
 				83792D6C21CC1CDC001E01E4 /* StoriesViewToolbar.swift in Sources */,
 				8350EC5C21CF153B004994F2 /* EditToolbar.swift in Sources */,
+				83B6D66021D546B800D36207 /* ChapterViewController-Edit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
