@@ -13,7 +13,7 @@ final class ChapterViewController: UIViewController, LayoutLoading,
                                    UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet   var chapterCollectionView:  UICollectionView?
     @IBOutlet   var editToolbar:            EditToolbar?
-                var chapter:                Chapter?               = nil
+                var chapter:                Chapter?               
     
     override func viewDidLoad() {
         super.viewDidLoad()

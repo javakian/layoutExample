@@ -1,12 +1,12 @@
 <UIView
     backgroundColor                 ="backgrndColor"
-    >
+>
     <UIView
         top                             ="safeAreaInsets.top"
         bottom                          ="safeAreaInsets.bottom"
         left                            ="safeAreaInsets.left"
         right                           ="safeAreaInsets.right"
-        >
+    >
         <UIImageView
             isHidden                    ="imageHidden"
             outlet                      ="imageView"
@@ -32,7 +32,7 @@
             width                       ="100%"
             height                      ="parent.height - labelHeight - toolBarHeight_Int"
             backgroundColor             ="backgrndColor"
-            >
+        >
             <AVPlayerViewController
                 outlet                  ="avController"
                 view.backgroundColor    ="backgrndColor"

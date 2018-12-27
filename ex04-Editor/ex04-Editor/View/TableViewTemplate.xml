@@ -1,7 +1,7 @@
 <UITableView
     estimatedRowHeight   ="55"
     backgroundColor      ="backgrndColor"
-    >
+>
     <UITableViewCell
         detailTextLabel.highlightedTextColor    ="#fff7"
         detailTextLabel.text                    ="{rowDetail}"
@@ -14,7 +14,8 @@
         textLabel.highlightedTextColor          ="white"
         textLabel.font                          ="Futura body"
         textLabel.numberOfLines                 ="0"
-        textLabel.text                          ="{rowTitle}">
+        textLabel.text                          ="{rowTitle}"
+    >
         <UIImageView
             isHidden       ="{hideImage}"
             image          ="{image}"

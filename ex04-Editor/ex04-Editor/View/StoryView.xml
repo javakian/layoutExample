@@ -3,7 +3,7 @@
     right           ="safeAreaInsets.right"
     top             ="safeAreaInsets.top"
     bottom          ="safeAreaInsets.bottom"
-    >
+>
     <UITableView
         outlet          ="storyTableView"
         template        ="TableViewTemplate.xml"

@@ -5,6 +5,7 @@
 
 import UIKit
 import Model
+import Interface
 
 extension StoryViewController: EditToolbarDelegate {
     
@@ -21,6 +22,8 @@ extension StoryViewController: EditToolbarDelegate {
     
     func editAction(toolbar: UIToolbar) {
         print("edit")
+        let textEdit = TextEditController()
+        self.present( textEdit, animated: true, completion: nil )
     }
     
     func reorderAction(toolbar: UIToolbar) {

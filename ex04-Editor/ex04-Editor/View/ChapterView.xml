@@ -3,7 +3,7 @@
     right           ="safeAreaInsets.right"
     top             ="safeAreaInsets.top"
     bottom          ="safeAreaInsets.bottom"
-    >
+>
     <UICollectionView
         outlet                                          ="chapterCollectionView"
         height                                          ="parent.height - toolBarHeight_Int"
@@ -15,7 +15,7 @@
         contentInset.left                               ="10"
         contentInset.right                              ="10"
         contentInsetAdjustmentBehavior                  ="never"
-        >
+    >
         
         <UICollectionViewCell
             clipsToBounds   ="true"

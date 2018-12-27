@@ -27,7 +27,6 @@
 		83B6D65E21D5438900D36207 /* PlayViewController-Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B6D65D21D5438900D36207 /* PlayViewController-Edit.swift */; };
 		83B6D66021D546B800D36207 /* ChapterViewController-Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B6D65F21D546B800D36207 /* ChapterViewController-Edit.swift */; };
 		83B6D66221D547BA00D36207 /* StoryViewController-Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B6D66121D547BA00D36207 /* StoryViewController-Edit.swift */; };
-		83D7AE6321D29EC200C545FE /* DeleteAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7AE6221D29EC200C545FE /* DeleteAlert.swift */; };
 		83D908E221D15F4B001B8F35 /* ChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D908E121D15F4B001B8F35 /* ChapterViewController.swift */; };
 		83D908E421D1600B001B8F35 /* ChapterView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 83D908E321D1600B001B8F35 /* ChapterView.xml */; };
 		83D908E621D17188001B8F35 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D908E521D17188001B8F35 /* PlayViewController.swift */; };
@@ -70,7 +69,6 @@
 		83B6D65D21D5438900D36207 /* PlayViewController-Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayViewController-Edit.swift"; sourceTree = "<group>"; };
 		83B6D65F21D546B800D36207 /* ChapterViewController-Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterViewController-Edit.swift"; sourceTree = "<group>"; };
 		83B6D66121D547BA00D36207 /* StoryViewController-Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryViewController-Edit.swift"; sourceTree = "<group>"; };
-		83D7AE6221D29EC200C545FE /* DeleteAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlert.swift; sourceTree = "<group>"; };
 		83D908E121D15F4B001B8F35 /* ChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterViewController.swift; sourceTree = "<group>"; };
 		83D908E321D1600B001B8F35 /* ChapterView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ChapterView.xml; sourceTree = "<group>"; };
 		83D908E521D17188001B8F35 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 		83D7AE6121D29E1E00C545FE /* Edit */ = {
 			isa = PBXGroup;
 			children = (
-				83D7AE6221D29EC200C545FE /* DeleteAlert.swift */,
 				83B6D66121D547BA00D36207 /* StoryViewController-Edit.swift */,
 				83B6D65F21D546B800D36207 /* ChapterViewController-Edit.swift */,
 				83B6D65D21D5438900D36207 /* PlayViewController-Edit.swift */,
@@ -241,7 +238,6 @@
 				8350EC5A21CF1001004994F2 /* StoryViewController.swift in Sources */,
 				83D908E621D17188001B8F35 /* PlayViewController.swift in Sources */,
 				834B1D9B21CAE581002DE0FA /* StoriesViewController.swift in Sources */,
-				83D7AE6321D29EC200C545FE /* DeleteAlert.swift in Sources */,
 				834B1D9F21CAF7C8002DE0FA /* StateManager.swift in Sources */,
 				831B433921CAE1BF00B51572 /* AppDelegate.swift in Sources */,
 				83B6D65E21D5438900D36207 /* PlayViewController-Edit.swift in Sources */,

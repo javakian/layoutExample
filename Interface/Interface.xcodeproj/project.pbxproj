@@ -13,6 +13,10 @@
 		836B754321CD63D6005417AE /* LongTouchTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836B754221CD63D6005417AE /* LongTouchTip.swift */; };
 		83792D7E21CC502C001E01E4 /* Interface.h in Headers */ = {isa = PBXBuildFile; fileRef = 83792D7C21CC502C001E01E4 /* Interface.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83792D8621CC50A2001E01E4 /* Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83792D8521CC50A2001E01E4 /* Layout.framework */; };
+		83B6D66621D580F200D36207 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B6D66521D580F200D36207 /* Model.framework */; };
+		83B6D66821D580FB00D36207 /* DeleteAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B6D66721D580FB00D36207 /* DeleteAlert.swift */; };
+		83B6D66A21D581A700D36207 /* TextEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B6D66921D581A700D36207 /* TextEditController.swift */; };
+		83B6D66C21D5829800D36207 /* TextEdit.xml in Resources */ = {isa = PBXBuildFile; fileRef = 83B6D66B21D5829800D36207 /* TextEdit.xml */; };
 		83D7AE6721D307A100C545FE /* TableViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D7AE6621D307A100C545FE /* TableViewLayout.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +29,10 @@
 		83792D7C21CC502C001E01E4 /* Interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interface.h; sourceTree = "<group>"; };
 		83792D7D21CC502C001E01E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83792D8521CC50A2001E01E4 /* Layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B6D66521D580F200D36207 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B6D66721D580FB00D36207 /* DeleteAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlert.swift; sourceTree = "<group>"; };
+		83B6D66921D581A700D36207 /* TextEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditController.swift; sourceTree = "<group>"; };
+		83B6D66B21D5829800D36207 /* TextEdit.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TextEdit.xml; sourceTree = "<group>"; };
 		83D7AE6621D307A100C545FE /* TableViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B6D66621D580F200D36207 /* Model.framework in Frameworks */,
 				83792D8621CC50A2001E01E4 /* Layout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				836B753921CC59F6005417AE /* ThirdParty */,
+				83B6D66921D581A700D36207 /* TextEditController.swift */,
+				83B6D66B21D5829800D36207 /* TextEdit.xml */,
+				83B6D66721D580FB00D36207 /* DeleteAlert.swift */,
 				836B753421CC5139005417AE /* AVKit+Layout.swift */,
 				836B754221CD63D6005417AE /* LongTouchTip.swift */,
 				83D7AE6621D307A100C545FE /* TableViewLayout.swift */,
@@ -82,6 +94,7 @@
 		83792D8421CC50A2001E01E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83B6D66521D580F200D36207 /* Model.framework */,
 				83792D8521CC50A2001E01E4 /* Layout.framework */,
 			);
 			name = Frameworks;
@@ -156,6 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B6D66C21D5829800D36207 /* TextEdit.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +181,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				836B753C21CC5AE6005417AE /* EasyTipView.swift in Sources */,
+				83B6D66A21D581A700D36207 /* TextEditController.swift in Sources */,
+				83B6D66821D580FB00D36207 /* DeleteAlert.swift in Sources */,
 				836B754321CD63D6005417AE /* LongTouchTip.swift in Sources */,
 				836B753521CC5139005417AE /* AVKit+Layout.swift in Sources */,
 				83D7AE6721D307A100C545FE /* TableViewLayout.swift in Sources */,

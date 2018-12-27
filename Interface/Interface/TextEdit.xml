@@ -1,0 +1,67 @@
+<UIView
+    left            ="safeAreaInsets.left"
+    right           ="safeAreaInsets.right"
+    top             ="safeAreaInsets.top"
+    bottom          ="safeAreaInsets.bottom"
+    backgroundColor ="#bbb"
+    >
+    <UIStackView
+        axis            ="vertical"
+        alignment       ="center"
+        distribution    ="fillProportionally"
+        width           ="100%"
+        spacing         ="10"
+    >
+        <UILabel
+            outlet          ="contextLabel"
+            text            ="What we are doing"
+            textAlignment   ="left"
+            numberOfLines   ="0"
+            backgroundColor ="#aaa"
+            width           ="100%"
+            height          ="50"
+        />
+        <UITextView
+            outlet          ="textView"
+            text            ="You can edit this man"
+            backgroundColor ="#888"
+            width           ="100%"
+            height          ="200"
+        />
+        <UILabel
+            outlet          ="rulesLabel"
+            text            ="The rules for doing it"
+            textAlignment   ="center"
+            numberOfLines   ="0"
+            backgroundColor ="#777"
+            height          ="50"
+            width           ="100%"
+        />
+        <UIStackView
+            axis            ="horizontal"
+            alignment       ="fill"
+            spacing         ="10"
+            distribution    ="fillProportionally"
+        >
+            <UIButton
+                outlet              ="buttonSave"
+                title               ="Save"
+                layer.cornerRadius  ="5"
+                touchUpInside       ="actionSave"
+                height              ="50"
+                width               ="120"
+                backgroundColor     ="#444"
+            />
+            <UIButton
+                outlet              ="buttonCancel"
+                layer.cornerRadius  ="5"
+                title               ="Cancel"
+                touchUpInside       ="actionCancel"
+                height              ="50"
+                width               ="120"
+                backgroundColor     ="#333"
+            />
+        </UIStackView>
+    </UIStackView>
+</UIView>
+

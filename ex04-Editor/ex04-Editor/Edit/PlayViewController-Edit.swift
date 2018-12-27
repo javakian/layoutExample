@@ -5,6 +5,7 @@
 
 import UIKit
 import Model
+import Interface
 
 extension PlayViewController: EditToolbarDelegate {
     // MARK: EditToolbarDelegate

@@ -18,7 +18,7 @@ final class PlayViewController: UIViewController, LayoutLoading {
     @IBOutlet       var     avController:   AVPlayerViewController?
     internal        var     aAssetId:       [Int]        = [Int]()
     private         var     _curAssetIndex: Int          = 0
-    private         var     _curTimer:      Timer?       = nil
+    private         var     _curTimer:      Timer?       
     
     override func viewDidLoad() {
         super.viewDidLoad()

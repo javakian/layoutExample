@@ -12,7 +12,7 @@ final class StoryViewController: UIViewController, LayoutLoading,
                                  UITableViewDataSource, UITableViewDelegate, TableViewLayout {
     @IBOutlet   var storyTableView: UITableView?
     @IBOutlet   var editToolbar:    EditToolbar?
-                var story:          Story? = nil
+                var story:          Story? 
     
     override func viewDidLoad() {
         super.viewDidLoad()
