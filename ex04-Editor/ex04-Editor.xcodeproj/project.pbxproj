@@ -17,7 +17,6 @@
 		834B1D9A21CAE581002DE0FA /* StoriesView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 834B1D9621CAE581002DE0FA /* StoriesView.xml */; };
 		834B1D9B21CAE581002DE0FA /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B1D9721CAE581002DE0FA /* StoriesViewController.swift */; };
 		834B1D9D21CAE581002DE0FA /* TableViewTemplate.xml in Resources */ = {isa = PBXBuildFile; fileRef = 834B1D9921CAE581002DE0FA /* TableViewTemplate.xml */; };
-		834B1D9F21CAF7C8002DE0FA /* StateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B1D9E21CAF7C8002DE0FA /* StateManager.swift */; };
 		8350EC5821CF0F85004994F2 /* StoryView.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8350EC5721CF0F85004994F2 /* StoryView.xml */; };
 		8350EC5A21CF1001004994F2 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8350EC5921CF1001004994F2 /* StoryViewController.swift */; };
 		8350EC5C21CF153B004994F2 /* EditToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8350EC5B21CF153B004994F2 /* EditToolbar.swift */; };
@@ -60,7 +59,6 @@
 		834B1D9621CAE581002DE0FA /* StoriesView.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = StoriesView.xml; sourceTree = "<group>"; };
 		834B1D9721CAE581002DE0FA /* StoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
 		834B1D9921CAE581002DE0FA /* TableViewTemplate.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TableViewTemplate.xml; sourceTree = "<group>"; };
-		834B1D9E21CAF7C8002DE0FA /* StateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManager.swift; sourceTree = "<group>"; };
 		8350EC5721CF0F85004994F2 /* StoryView.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = StoryView.xml; sourceTree = "<group>"; };
 		8350EC5921CF1001004994F2 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		8350EC5B21CF153B004994F2 /* EditToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditToolbar.swift; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 				83D908E921D19A4A001B8F35 /* View */,
 				8350EC5D21CFCEFD004994F2 /* Toolbar */,
 				831B433821CAE1BF00B51572 /* AppDelegate.swift */,
-				834B1D9E21CAF7C8002DE0FA /* StateManager.swift */,
 				831B433F21CAE1C000B51572 /* Assets.xcassets */,
 				831B434121CAE1C000B51572 /* LaunchScreen.storyboard */,
 				831B434421CAE1C000B51572 /* Info.plist */,
@@ -238,7 +235,6 @@
 				8350EC5A21CF1001004994F2 /* StoryViewController.swift in Sources */,
 				83D908E621D17188001B8F35 /* PlayViewController.swift in Sources */,
 				834B1D9B21CAE581002DE0FA /* StoriesViewController.swift in Sources */,
-				834B1D9F21CAF7C8002DE0FA /* StateManager.swift in Sources */,
 				831B433921CAE1BF00B51572 /* AppDelegate.swift in Sources */,
 				83B6D65E21D5438900D36207 /* PlayViewController-Edit.swift in Sources */,
 				83D908E221D15F4B001B8F35 /* ChapterViewController.swift in Sources */,

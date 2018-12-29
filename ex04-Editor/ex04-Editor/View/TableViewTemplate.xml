@@ -1,6 +1,6 @@
 <UITableView
     estimatedRowHeight   ="55"
-    backgroundColor      ="backgrndColor"
+    backgroundColor      ="bkgcViewColor"
 >
     <UITableViewCell
         detailTextLabel.highlightedTextColor    ="#fff7"

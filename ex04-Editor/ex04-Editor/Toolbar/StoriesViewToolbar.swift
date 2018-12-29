@@ -30,9 +30,6 @@ internal final class StoriesViewToolbar: UIToolbar {
                                    text: "Switch between view and edit mode", durationSec: 5)
             touchTip!.addTipTarget(barItem: barItemHelp,
                                    text: "About ex04-Editor", durationSec: 4 )
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1 ) {
-                self.touchTip!.show()
-            }
         }
 
         let items = [self.barItemMode, self.barItemSpace, self.barItemHelp ]

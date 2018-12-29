@@ -3,9 +3,10 @@
     right           ="safeAreaInsets.right"
     top             ="safeAreaInsets.top"
     bottom          ="safeAreaInsets.bottom"
-    backgroundColor ="#bbb"
+    backgroundColor ="{bkgcViewColor}"
     >
     <UIStackView
+        outlet          ="stackView"
         axis            ="vertical"
         alignment       ="center"
         distribution    ="fillProportionally"
@@ -14,26 +15,26 @@
     >
         <UILabel
             outlet          ="contextLabel"
-            text            ="What we are doing"
+            text            ="{context}"
             textAlignment   ="left"
             numberOfLines   ="0"
-            backgroundColor ="#aaa"
+            backgroundColor ="bkgdLabelColor"
             width           ="100%"
             height          ="50"
         />
         <UITextView
             outlet          ="textView"
-            text            ="You can edit this man"
-            backgroundColor ="#888"
+            text            ="{initial}"
+            backgroundColor ="bkgdTextInputColor"
             width           ="100%"
-            height          ="200"
+            height          ="80"
         />
         <UILabel
             outlet          ="rulesLabel"
-            text            ="The rules for doing it"
+            text            ="{rules}"
             textAlignment   ="center"
             numberOfLines   ="0"
-            backgroundColor ="#777"
+            backgroundColor ="bkgdLabelColor"
             height          ="50"
             width           ="100%"
         />
@@ -50,7 +51,7 @@
                 touchUpInside       ="actionSave"
                 height              ="50"
                 width               ="120"
-                backgroundColor     ="#444"
+                backgroundColor     ="bkgrButtonColor"
             />
             <UIButton
                 outlet              ="buttonCancel"
@@ -59,7 +60,7 @@
                 touchUpInside       ="actionCancel"
                 height              ="50"
                 width               ="120"
-                backgroundColor     ="#333"
+                backgroundColor     ="bkgrButtonColor"
             />
         </UIStackView>
     </UIStackView>

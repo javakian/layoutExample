@@ -8,6 +8,7 @@ import AVFoundation
 import AVKit
 import Layout
 import Model
+import Interface
 
 final class PlayViewController: UIViewController, LayoutLoading {
     @IBOutlet       var     editToolbar:    EditToolbar? 

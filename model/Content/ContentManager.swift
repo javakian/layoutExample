@@ -31,6 +31,9 @@ public final class ContentManager {
         Text.addText( text_ )
         self._notifyAdd()
     }
+    public static func changeMade( itemId: Int ) {
+        self._notifyChange()
+    }
     public static func deleteBy( itemId: Int ) {
         if let contentIndex = ContentIndex.singleton.getBy(itemId: itemId ) {
             switch contentIndex.itemContentType {
@@ -93,6 +96,10 @@ public final class ContentManager {
     private init() {}
     
     private static func _notifyAdd() {
+        let notify = Notification(name: Notification.Name.Model_ContentManager_Change )
+        NotificationQueue.default.enqueue( notify, postingStyle: .whenIdle, coalesceMask: .onName, forModes: nil )
+    }
+    private static func _notifyChange() {
         let notify = Notification(name: Notification.Name.Model_ContentManager_Change )
         NotificationQueue.default.enqueue( notify, postingStyle: .whenIdle, coalesceMask: .onName, forModes: nil )
     }

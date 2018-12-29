@@ -1,5 +1,5 @@
 //  StateManager.swift
-//  ex04-Editor
+//  Interface
 //
 //
 //  Created by CHH51 on 12/19/18.
@@ -17,8 +17,11 @@ public final class StateManager {
     }}
     // MARK: public Constants
     private(set) public var globalLayoutConstants: [String: Any] = [
-        "backgrndColor"     : UIColor.lightGray
-    ]
+        "bkgcViewColor"      : UIColor.lightGray,
+        "bkgdLabelColor"     : UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5),
+        "bkgdTextInputColor" : UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 0.5),
+        "bkgrButtonColor"    : UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 0.5)
+        ]
     
     // MARK: public Layout state
     public enum State: String {

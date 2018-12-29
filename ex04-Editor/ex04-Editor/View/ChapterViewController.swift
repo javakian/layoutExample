@@ -8,6 +8,7 @@ import AVFoundation
 import AVKit
 import Layout
 import Model
+import Interface
 
 final class ChapterViewController: UIViewController, LayoutLoading,
                                    UICollectionViewDelegate, UICollectionViewDataSource {

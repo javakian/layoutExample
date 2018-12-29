@@ -1,5 +1,5 @@
 <UIView
-    backgroundColor                 ="backgrndColor"
+    backgroundColor                 ="bkgcViewColor"
 >
     <UIView
         top                             ="safeAreaInsets.top"
@@ -13,7 +13,7 @@
             contentMode                 ="scaleAspectFit"
             width                       ="100%"
             height                      ="parent.height - labelHeight - toolBarHeight_Int"
-            backgroundColor             ="backgrndColor"
+            backgroundColor             ="bkgcViewColor"
         />
         <UILabel
             isHidden                    ="textHidden"
@@ -22,7 +22,7 @@
             height                      ="parent.height - toolBarHeight_Int"
             width                       ="100%"
             textAlignment               ="left"
-            backgroundColor             ="backgrndColor"
+            backgroundColor             ="bkgcViewColor"
             numberOfLines               ="0"
             lineBreakMode               ="byWordWrapping"
         />
@@ -31,11 +31,11 @@
             outlet                      ="movieView"
             width                       ="100%"
             height                      ="parent.height - labelHeight - toolBarHeight_Int"
-            backgroundColor             ="backgrndColor"
+            backgroundColor             ="bkgcViewColor"
         >
             <AVPlayerViewController
                 outlet                  ="avController"
-                view.backgroundColor    ="backgrndColor"
+                view.backgroundColor    ="bkgcViewColor"
                 showsPlaybackControls   ="true"
             />
         </UIView>
@@ -47,7 +47,7 @@
             height                      ="labelHeight"
             width                       ="100%"
             textAlignment               ="center"
-            backgroundColor             ="backgrndColor"
+            backgroundColor             ="bkgcViewColor"
             adjustsFontSizeToFitWidth   ="true"
             numberOfLines               ="1"
             lineBreakMode               ="byTruncatingTail"

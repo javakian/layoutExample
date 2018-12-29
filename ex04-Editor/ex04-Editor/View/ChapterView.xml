@@ -7,7 +7,7 @@
     <UICollectionView
         outlet                                          ="chapterCollectionView"
         height                                          ="parent.height - toolBarHeight_Int"
-        backgroundColor                                 ="backgrndColor"
+        backgroundColor                                 ="bkgcViewColor"
         collectionViewLayout.itemSize.height            ="collectionViewLayout.itemSize.width"
         collectionViewLayout.itemSize.width             ="(100% - 6 * 10) / 2"
         collectionViewLayout.minimumInteritemSpacing    ="10"
