@@ -23,6 +23,10 @@
 [l23]: https://github.com/chh51/layoutExample/wiki
 [l24]: https://github.com/nicklockwood/layout
 
+Work suspended 
+1) I established that layout would work for the app I am building
+2) Further work on the example was too complex to be a useful example for others
+
 # layoutExample
 [Real world examples][l23] using [nicklockwood/layout][l24]
 
