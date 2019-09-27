@@ -26,6 +26,7 @@
 Work suspended 
 1) I established that layout would work for the app I am building
 2) Further work on the example was too complex to be a useful example for others
+3) June 2019 - SwiftUI announced - Yikes - **layout** is now pretty much irrelevent.  Thanks for your hard work Nick Lockwood.
 
 # layoutExample
 [Real world examples][l23] using [nicklockwood/layout][l24]
